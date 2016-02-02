@@ -3,7 +3,7 @@ describe('Park', function() {
     var testPark = new Park("Peninsula Park", "north");
     expect(testPark.parkName).to.equal("Peninsula Park");
     expect(testPark.amenities).to.eql([]);
-    expect(testPark.allParks).to.eql([]);
+    expect(testPark.review).to.eql([]);
     expect(testPark.parkLocation).to.equal("north");
 
   });

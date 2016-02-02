@@ -56,7 +56,7 @@ var allParks = [arborLodge, overlook, peninsula, alberta, buckmanField, grant, l
 function Park(parkName, parkLocation) {
   this.parkName = parkName;
   this.amenities = [];
-  this.allParks = [];
+  this.review = [];
   this.parkLocation = parkLocation;
 }
 
