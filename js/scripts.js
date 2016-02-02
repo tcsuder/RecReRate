@@ -122,6 +122,16 @@ $(document).ready(function() {
     $("#homePage").hide();
   });
 
+  $("form.search-form").submit(function(event) {
+    event.preventDefault;
+
+    var locations = [];
+    $.each($('input[name="location"]:checked'), function() {
+      locations.push($(this).val());
+    });
+
+  });
+
   $("form.form-horizontal").submit(function(event) {
     var userName = $("input#reviewName").val();
     var userRating = $("select#reviewRating").val();
