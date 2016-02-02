@@ -64,7 +64,6 @@ function Park(parkName, parkLocation) {
 userChosenParks = [];
 
 var parkCompiler = function(location) {
-  debugger;
   for (var i = 0; i < allParks.length; i++) {
     if (location === allParks[i].parkLocation) {
       userChosenParks.push(allParks[i]);
@@ -74,6 +73,7 @@ var parkCompiler = function(location) {
 }
 
 var amenitiesFinder = function(amenity) {
+  debugger;
   for (var i = userChosenParks.length - 1; i >=0 ; i--) {
     if (userChosenParks[i].amenities.indexOf(amenity) === -1) {
       userChosenParks.splice(i, 1);
@@ -125,13 +125,23 @@ $(document).ready(function() {
 
   $("form.search-form").submit(function(event) {
     event.preventDefault;
-
+    var amenities = [];
+    var activities = [];
     var locations = [];
+
     $.each($('input[name="location"]:checked'), function() {
       locations.push($(this).val());
     });
     for (var i = 0; i < locations.length; i++) {
       parkCompiler(locations[i]);
+    }
+
+    $.each($('input[name="amenity"]:checked'), function() {
+      amenities.push($(this).val());
+    });
+    for (var i = 0; i < amenities.length; i++) {
+      console.log(userChosenParks);
+      amenitiesFinder(amenities[i]);
     }
   });
 
