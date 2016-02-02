@@ -11,69 +11,75 @@ var tryon = new Park("Tryon Creek State Park", "southWest");
 var forest = new Park("Forest Park", "northWest");
 var jamison = new Park("Jamison Square", "northWest");
 
-var allParks = [arborLodge, overlook, peninsula, alberta, buckmanField, grant, laurelhurst, tabor, gabriel, tryon, forest, jamison];
-
 // NORTH
-allParks.arborLodge.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "horseshoePit", "dogArea", "paths", "playground", "soccerField"];
-allParks.arborLodge.activities = ["tennis", "baseball", "kickball", "horseshoe", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
+arborLodge.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "horseshoePit", "dogArea", "paths", "playground", "soccerField"];
+arborLodge.activities = ["tennis", "baseball", "kickball", "horseshoe", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
 
-allParks.overlook.amenities = ["picnic", "restroom", "baseballField", "basketballCourt", "dogArea", "paths", "playground", "soccerField"];
-allParks.overlook.activities = ["baseball", "kickball", "basketball", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"]
+overlook.amenities = ["picnic", "restroom", "baseballField", "basketballCourt", "dogArea", "paths", "playground", "soccerField"];
+overlook.activities = ["baseball", "kickball", "basketball", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"]
 
-allParks.peninsula.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "horseshoePit", "fountain", "paths", "playground", "soccerField", "pool"];
-allParks.peninsula.activities = ["tennis", "baseball", "kickball", "basketball", "horseshoe", "pavedPaths", "soccer", "frisbee", "ballSports", "poolSwimming"];
+peninsula.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "horseshoePit", "fountain", "paths", "playground", "soccerField", "pool"];
+peninsula.activities = ["tennis", "baseball", "kickball", "basketball", "horseshoe", "pavedPaths", "soccer", "frisbee", "ballSports", "poolSwimming"];
+
 // NORTHEAST
-allParks.alberta.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "paths", "playground", "soccerField"];
-allParks.alberta.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
+alberta.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "paths", "playground", "soccerField"];
+alberta.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
 
-allParks.buckmanField.amenities = ["picnic", "baseballField", "playground", "soccerField"];
-allParks.buckmanField.activities = ["baseball", "kickball", "soccer", "frisbee", "ballSports"];
+buckmanField.amenities = ["picnic", "baseballField", "playground", "soccerField"];
+buckmanField.activities = ["baseball", "kickball", "soccer", "frisbee", "ballSports"];
 
-allParks.grant.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "fountain", "naturalArea", "paths", "playground", "skatepark", "pool"];
-allParks.grant.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLeash", "fountain", "pavedPaths", "skateboarding", "poolSwimming"];
+grant.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "fountain", "naturalArea", "paths", "playground", "skatepark", "pool"];
+grant.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLeash", "fountain", "pavedPaths", "skateboarding", "poolSwimming"];
 // SOUTHEAST
-allParks.laurelhurst.amenities = ["picnic", "restroom", "tennisCourt", "basketballCourt", "horseshoePit", "dogArea", "paths", "playground", "soccerField"];
-allParks.laurelhurst.activities = ["tennis", "basketball", "horseshoe", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
+laurelhurst.amenities = ["picnic", "restroom", "tennisCourt", "basketballCourt", "horseshoePit", "dogArea", "paths", "playground", "soccerField"];
+laurelhurst.activities = ["tennis", "basketball", "horseshoe", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
 
-allParks.tabor.amenities = ["picnic", "restroom", "tennisCourt", "basketballCourt", "horseshoePit", "dogArea", "naturalArea", "paths", "playground"];
-allParks.tabor.activities = ["tennis", "basketball", "horseshoe", "dogOffLeash", "wildlife", "hikingTrails", "pavedPaths"];
+tabor.amenities = ["picnic", "restroom", "tennisCourt", "basketballCourt", "horseshoePit", "dogArea", "naturalArea", "paths", "playground"];
+tabor.activities = ["tennis", "basketball", "horseshoe", "dogOffLeash", "wildlife", "hikingTrails", "pavedPaths"];
 
 // SOUTHWEST
-allParks.gabriel.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "paths", "playground", "skatepark", "soccerField"];
-allParks.gabriel.activities = ["tennis", "baseball", "kickball", "basketball", "fountain", "pavedPaths", "skateboarding", "soccer", "frisbee", "ballSports"];
+gabriel.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "paths", "playground", "skatepark", "soccerField"];
+gabriel.activities = ["tennis", "baseball", "kickball", "basketball", "fountain", "pavedPaths", "skateboarding", "soccer", "frisbee", "ballSports"];
 
-allParks.tryon.amenities = ["picnic", "restroom", "naturalArea", "paths"];
-allParks.tryon.activities = ["wildlife", "hikingTrails", "pavedPaths"];
+tryon.amenities = ["picnic", "restroom", "naturalArea", "paths"];
+tryon.activities = ["wildlife", "hikingTrails", "pavedPaths"];
 
 // NORTHWEST
-allParks.forest.amenities = ["restroom", "naturalArea", "paths"];
-allParks.forest.activities = ["wildlife", "hikingTrails"];
+forest.amenities = ["restroom", "naturalArea", "paths"];
+forest.activities = ["wildlife", "hikingTrails"];
 
-allParks.jamison.amenities = ["restroom", "fountain"];
-allParks.jamison.activities = ["fountain"];
+jamison.amenities = ["restroom", "fountain"];
+jamison.activities = ["fountain"];
 
-
-
+var allParks = [arborLodge, overlook, peninsula, alberta, buckmanField, grant, laurelhurst, tabor, gabriel, tryon, forest, jamison];
 
 function Park(parkName, parkLocation) {
   this.parkName = parkName;
   this.amenities = [];
-  this.reviews = [];
   this.allParks = [];
   this.parkLocation = parkLocation;
 }
 
-Park.prototype.parkCompiler = function(north, northEast, southEast, northWest, southWest) {
-  var peninsula = new Park("Peninsula Park");
-  peninsula.north = true;
-  var fernhill = new Park("Fernhill Park");
-  peninsula.northEast = true;
-  var allParks = [peninsula, fernhill];
-  var userParks = [];
+userChosenParks = [];
+
+var parkCompiler = function(location) {
   for (var i = 0; i < allParks.length; i++) {
-  if (allParks[i].north === true) {
-    userParks.push(allParks[i]);
-    console.log(userParks);
+    if (location === allParks[i].parkLocation) {
+      userChosenParks.push(allParks[i]);
     }
   }
+  return userChosenParks;
+}
+
+var amenitiesFinder = function(amenity) {
+  debugger;
+  console.log(userChosenParks);
+  for (var i = 0; i < userChosenParks.length; i++) {
+    userChosenParks[i].amenities.indexOf(amenity);
+    if (userChosenParks[i].amenities.indexOf(amenity) === -1) {
+      userChosenParks[.splice(i, 1)];
+      console.log(userChosenParks);
+    }
+  }
+  return userChosenParks;
 }
