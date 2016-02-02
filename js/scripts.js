@@ -73,7 +73,6 @@ var parkCompiler = function(location) {
 }
 
 var amenitiesFinder = function(amenity) {
-  debugger;
   for (var i = userChosenParks.length - 1; i >=0 ; i--) {
     if (userChosenParks[i].amenities.indexOf(amenity) === -1) {
       userChosenParks.splice(i, 1);
@@ -83,6 +82,7 @@ var amenitiesFinder = function(amenity) {
 }
 
 var activitiesFinder = function(activity) {
+    debugger;
   for (var i = userChosenParks.length - 1; i >=0 ; i--) {
     if (userChosenParks[i].activities.indexOf(activity) === -1) {
       userChosenParks.splice(i, 1);
@@ -140,9 +140,16 @@ $(document).ready(function() {
       amenities.push($(this).val());
     });
     for (var i = 0; i < amenities.length; i++) {
-      console.log(userChosenParks);
       amenitiesFinder(amenities[i]);
     }
+
+    $.each($('input[name="activity"]:checked'), function() {
+      activities.push($(this).val());
+    });
+    for (var i = 0; i < activities.length; i++) {
+      activitiesFinder(activities[i]);
+    }
+    console.log(userChosenParks);
   });
 
   $("form.form-horizontal").submit(function(event) {
