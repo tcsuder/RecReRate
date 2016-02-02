@@ -64,6 +64,7 @@ function Park(parkName, parkLocation) {
 userChosenParks = [];
 
 var parkCompiler = function(location) {
+  debugger;
   for (var i = 0; i < allParks.length; i++) {
     if (location === allParks[i].parkLocation) {
       userChosenParks.push(allParks[i]);
@@ -129,7 +130,9 @@ $(document).ready(function() {
     $.each($('input[name="location"]:checked'), function() {
       locations.push($(this).val());
     });
-
+    for (var i = 0; i < locations.length; i++) {
+      parkCompiler(locations[i]);
+    }
   });
 
   $("form.form-horizontal").submit(function(event) {
