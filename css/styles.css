@@ -1,7 +1,12 @@
-.modalImg {
-  max-width: 100%;
+/* ===============================FRONT PAGE BUTTONS*/
+#search, #browse {
+  display: none;
 }
 
+/* ===================================SEARCH PAGE*/
+
+
+/* ===================================BROWSE PAGE*/
 #browse ul li {
   list-style-type: none;
   text-decoration: underline;
@@ -13,4 +18,8 @@
   text-decoration: underline;
   color: blue;
   cursor:pointer;
+}
+
+.modalImg {
+  max-width: 100%;
 }
