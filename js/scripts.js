@@ -122,3 +122,22 @@ function Review(name, rating, comment) {
   this.rating = rating;
   this.comment = comment;
 }
+
+
+//User Interface Logic
+
+$(document).ready(function() {
+  $("form.form-horizontal").submit(function(event) {
+    var userName = $("input#reviewName").val();
+    var userRating = $("select#reviewRating").val();
+    var userCommnet = $("textarea#reviewComment").val();
+    var userReview = new Review (userName, userRating, userComment);
+    newPark.review.push(userReview);
+
+    event.preventDefault();
+  });
+});
+
+
+
+});
