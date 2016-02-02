@@ -88,3 +88,69 @@ var activitiesFinder = function(activity) {
   }
   return userChosenParks;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function() {
+
+  $(".park-click").each(function(index) {
+    $(this).on("click", function () {
+
+    });
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
