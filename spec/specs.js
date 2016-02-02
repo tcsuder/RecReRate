@@ -3,26 +3,24 @@ describe('Park', function() {
     var testPark = new Park("Peninsula Park", "north");
     expect(testPark.parkName).to.equal("Peninsula Park");
     expect(testPark.amenities).to.eql([]);
+    expect(testPark.activities).to.eql([]);
     expect(testPark.review).to.eql([]);
-    expect(testPark.allParks).to.eql([]);
     expect(testPark.parkLocation).to.equal("north");
-
   });
-
 
   it("will find all parks in one or more given locations", function() {
-    var peninsula = new Park("Peninsula Park");
-    peninsula.north = true;
-    var fernhill = new Park("Fernhill Park");
-    peninsula.northEast = true;
-    var allParks = [peninsula, fernhill];
-    expect(parkCompiler(true, true, false, false, false)).to.equal
+    expect(parkCompiler("north")).to.eql([arborLodge, overlook, peninsula])
+  });
+
+  it("will remove parks that don't have amenities chosen by user", function() {
+    expect(amenitiesFinder("pool")).to.eql([peninsula])
+  });
+
+  it("will remove parks that don't have activities chose by the user", function() {
+    userChosenParks = [arborLodge, overlook, peninsula];
+    expect(activitiesFinder("tennis")).to.eql([arborLodge, peninsula])
   });
 });
-
-
-
-
 
 describe('Review', function() {
   it("creates a new park review with the given specifications", function() {
