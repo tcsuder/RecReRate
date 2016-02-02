@@ -55,12 +55,12 @@ allParks.jamison.activities = ["fountain"];
 
 
 
-function Park(parkName) {
+function Park(parkName, parkLocation) {
   this.parkName = parkName;
   this.amenities = [];
   this.reviews = [];
   this.allParks = [];
-  this.parkLocation = "";
+  this.parkLocation = parkLocation;
 }
 
 Park.prototype.parkCompiler = function(north, northEast, southEast, northWest, southWest) {

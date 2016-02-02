@@ -1,16 +1,12 @@
 describe('Park', function() {
   it("creates a Park object with the given specifications", function() {
-    var testPark = new Park("Peninsula Park");
-    testPark.north = true;
+    var testPark = new Park("Peninsula Park", "north");
     expect(testPark.parkName).to.equal("Peninsula Park");
     expect(testPark.amenities).to.eql([]);
     expect(testPark.reviews).to.eql([]);
     expect(testPark.allParks).to.eql([]);
-    expect(testPark.north).to.equal(true);
-    expect(testPark.northEast).to.equal(false);
-    expect(testPark.southEast).to.equal(false);
-    expect(testPark.northWest).to.equal(false);
-    expect(testPark.southWest).to.equal(false);
+    expect(testPark.parkLocation).to.equal("north");
+
   });
 
 
