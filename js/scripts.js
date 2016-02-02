@@ -58,7 +58,6 @@ allParks.jamison.activities = ["fountain"];
 function Park(parkName, parkLocation) {
   this.parkName = parkName;
   this.amenities = [];
-  this.review = [];
   this.allParks = [];
   this.parkLocation = parkLocation;
 }
@@ -130,14 +129,14 @@ $(document).ready(function() {
   $("form.form-horizontal").submit(function(event) {
     var userName = $("input#reviewName").val();
     var userRating = $("select#reviewRating").val();
-    var userCommnet = $("textarea#reviewComment").val();
-    var userReview = new Review (userName, userRating, userComment);
-    newPark.review.push(userReview);
+    var userComment = $("textarea#reviewComment").val();
+  
+
+    $("div.realUserReivew").show();
+      $(".realUserName").text(userName);
+      $(".realUserRating").text(userRating);
+      $(".realUserComment").text(userComment);
 
     event.preventDefault();
   });
-});
-
-
-
 });
