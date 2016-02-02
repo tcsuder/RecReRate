@@ -58,7 +58,7 @@ allParks.jamison.activities = ["fountain"];
 function Park(parkName, parkLocation) {
   this.parkName = parkName;
   this.amenities = [];
-  this.reviews = [];
+  this.review = [];
   this.allParks = [];
   this.parkLocation = parkLocation;
 }
@@ -76,4 +76,49 @@ Park.prototype.parkCompiler = function(north, northEast, southEast, northWest, s
     console.log(userParks);
     }
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Review(name, rating, comment) {
+  this.name = name;
+  this.rating = rating;
+  this.comment = comment;
 }

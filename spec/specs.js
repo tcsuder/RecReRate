@@ -20,17 +20,39 @@ describe('Park', function() {
   });
 });
 
-// describe('Location', function() {
-//   it("creates a location object with the given specifications", function() {
-//     var testLocation = new Location("NE");
-//     testPark.north = true;
-//     expect(testPark.parkName).to.equal("Peninsula Park");
-//     expect(testPark.amenities).to.eql([]);
-//     expect(testPark.reviews).to.eql([]);
-//     expect(testPark.allParks).to.eql([]);
-//     expect(testPark.north).to.equal(true);
-//     expect(testPark.northEast).to.equal(false);
-//     expect(testPark.southEast).to.equal(false);
-//     expect(testPark.northWest).to.equal(false);
-//     expect(testPark.southWest).to.equal(false);
-//   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+describe('Review', function() {
+  it("creates a new park review with the given specifications", function (){
+    var testReview = new Review ("Jane", "Excellent", "Great park for kids and dogs.");
+    expect(testReview.name).to.equal("Jane");
+    expect(testReview.rating).to.equal("Excellent");
+    expect(testReview.comment).to.be.a("string");
+  });
+
+});
