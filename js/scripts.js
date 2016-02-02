@@ -55,11 +55,11 @@
 //
 //
 //
-// function Park(parkName, parkLocation) {
-//   this.parkName = parkName;
-//   this.amenities = [];
-//   this.review = [];
-//   this.parkLocation = parkLocation;
+function Park(parkName, parkLocation) {
+  this.parkName = parkName;
+  this.amenities = [];
+  this.review = [];
+  this.parkLocation = parkLocation;
 // }
 //
 // Park.prototype.parkCompiler = function(north, northEast, southEast, northWest, southWest) {
@@ -98,19 +98,13 @@ function Review(name, rating, comment) {
   this.comment = comment;
 }
 
-Review.prototype.fullReview = function () {
+Review.prototype.fullReview = function() {
   return "<p><strong>" + this.name + "</strong></p>" +
     "<p>Rating:" + this.rating + "</p>" +
     "<p>" + this.comment + "</p>";
 }
 
 
-
-
-
-// $("div.realUserReview").append("<p><strong>" + userReview.name + "</strong></p>");
-// $("div.realUserReview").append("<p>Rating:" + userReview.rating + "</p>");
-// $("div.realUserReview").append("<p>" + userReview.comment + "</p>")
 
 //User Interface Logic
 
@@ -162,10 +156,17 @@ $(document).ready(function() {
     var userRating = $("select#reviewRating").val();
     var userComment = $("textarea#reviewComment").val();
     var userReview = new Review (userName, userRating, userComment);
+  
 
-    $("div.realUserReview").append("<p><strong>" + userReview.name + "</strong></p>");
-    $("div.realUserReview").append("<p>Rating:" + userReview.rating + "</p>");
-    $("div.realUserReview").append("<p>" + userReview.comment + "</p>")
+    newPark.review.push(userReview);
+
+    $("div.realUserReview").text(userReview.fullReview());
+
+
+
+    // $("div.realUserReview").append("<p><strong>" + userReview.name + "</strong></p>");
+    // $("div.realUserReview").append("<p>Rating:" + userReview.rating + "</p>");
+    // $("div.realUserReview").append("<p>" + userReview.comment + "</p>")
 
 
     $("input#reviewName").val("");
