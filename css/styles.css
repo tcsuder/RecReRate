@@ -1,3 +1,16 @@
 .modalImg {
   max-width: 100%;
 }
+
+#browse ul li {
+  list-style-type: none;
+  text-decoration: underline;
+  color: #00CDCD;
+  width: 12%;
+}
+
+#browse ul li:hover {
+  text-decoration: underline;
+  color: blue;
+  cursor:pointer;
+}
