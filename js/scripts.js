@@ -72,13 +72,18 @@ var parkCompiler = function(location) {
 }
 
 var amenitiesFinder = function(amenity) {
-  debugger;
-  console.log(userChosenParks);
-  for (var i = 0; i < userChosenParks.length; i++) {
-    userChosenParks[i].amenities.indexOf(amenity);
+  for (var i = userChosenParks.length - 1; i >=0 ; i--) {
     if (userChosenParks[i].amenities.indexOf(amenity) === -1) {
-      userChosenParks[.splice(i, 1)];
-      console.log(userChosenParks);
+      userChosenParks.splice(i, 1);
+    }
+  }
+  return userChosenParks;
+}
+
+var activitiesFinder = function(activity) {
+  for (var i = userChosenParks.length - 1; i >=0 ; i--) {
+    if (userChosenParks[i].activities.indexOf(activity) === -1) {
+      userChosenParks.splice(i, 1);
     }
   }
   return userChosenParks;
