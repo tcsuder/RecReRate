@@ -112,21 +112,21 @@ Review.prototype.fullReview = function () {
 
 $(document).ready(function() {
 
-  $(".park-click").each(function(index) {
-    $(this).on("click", function () {
-    });
+  $("button#search-button").click(function() {
+      $("#search").slideDown();
+      $("#homePage").hide();
   });
 
+  $("button#browse-button").click(function() {
+    $("#browse").slideDown();
+    $("#homePage").hide();
+  });
 
   $("form.form-horizontal").submit(function(event) {
     var userName = $("input#reviewName").val();
     var userRating = $("select#reviewRating").val();
     var userComment = $("textarea#reviewComment").val();
     var userReview = new Review (userName, userRating, userComment);
-
-    $("div.realUserReview").append("<p><strong>" + userReview.name + "</strong></p>");
-    $("div.realUserReview").append("<p>Rating:" + userReview.rating + "</p>");
-    $("div.realUserReview").append("<p>" + userReview.comment + "</p>")
 
 
     $("input#reviewName").val("");
