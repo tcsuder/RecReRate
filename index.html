@@ -100,13 +100,7 @@
 
 
 
-
-
-
-
-
     <div id="browse" class="container">
-
       <h3>North Portland</h3>
       <ul>
         <li id="arborLodge">Arbor Lodge</li>
@@ -150,8 +144,7 @@
 
 
 
-
-
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#arborLodgeModal">Modal Preview</button>
 
         <div id="arborLodgeModal" class="modal fade">
           <div class="modal-dialog">
@@ -161,7 +154,34 @@
                   <h3 class="modal-title">Arbor Lodge Park</h3>
               </div>
               <div class="modal-body">
-                <h2></h2>
+                <img class="modalImg" src="img/arborLodge.jpg" alt="" />
+                <h4>Address: N Delaware Ave &amp; N Bryant St, Portland, OR 97217</h4>
+                <h4>Amenities: picnic area, restrooms, tennis courts, baseball field, horseshoe pit, off leash dog area, paved paths, playground, soccer field.</h4>
+                <hr>
+
+                <h4>About This Park:</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <hr>
+                <h4>Review:</h4>
+                <form class="form-horizontal">
+                  <input type="text" class="form-control" placeholder="Name"><br>
+                  <select class="form-control"><br>
+                    <option>Excellent</option>
+                    <option>Very Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                    <option>Terrible</option>
+                  </select><br>
+                  <textarea class="form-control" placeholder="Review this park" rows="3"></textarea>
+                   <br><button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <hr>
+                <div class="fakeReview">
+                  <p><strong>Jane Doe</strong></p>
+                  <p>Rating: Excellent</p>
+                  <p>Arbor Lodge Park is a great little park to take the family on a picnic, watch soccer or other games. It has a great playground with swings a mini climbing wall a big sandbox and other kid-friendly activities.</p>
+                </div>
+
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -171,23 +191,401 @@
         </div>
 
 
+        <div id="cathedralModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h3 class="modal-title">Cathedral Park</h3>
+              </div>
+              <div class="modal-body">
+                <img class="modalImg" src="img/cathedral.jpg" alt="" />
+                <h4>Address: N Edison St &amp; Pittsburg Ave</h4>
+                <h4>Amenities: picnic area, restrooms, water access, off leash dog area, natural area, paved paths.</h4>
+                <hr>
 
+                <h4>About This Park:</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <hr>
+                <h4>Review:</h4>
+                <form class="form-horizontal">
+                  <input type="text" class="form-control" placeholder="Name"><br>
+                  <select class="form-control"><br>
+                    <option>Excellent</option>
+                    <option>Very Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                    <option>Terrible</option>
+                  </select><br>
+                  <textarea class="form-control" placeholder="Review this park" rows="3"></textarea>
+                  <br><button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <hr>
+                <div class="fakeReview">
+                  <p><strong>Jane Doe</strong></p>
+                  <p>Rating: Excellent</p>
+                  <p>Cathedral Park is a great little park to take the family on a picnic, watch soccer or other games. It has a great playground with swings a mini climbing wall a big sandbox and other kid-friendly activities.</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div id="albertaModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h3 class="modal-title">Alberta Park</h3>
+              </div>
+              <div class="modal-body">
+                <img class="modalImg" src="img/alberta.jpg" alt="" />
+                <h4>Address: NE Killingsworth St, Portland, OR 97211</h4>
+                <h4>Amenities: picinic area, restrooms, tennis courts, baseball field, basketball court, off leash dog area, paved paths, playground, soccer field.</h4>
+                <hr>
 
+                <h4>About This Park:</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <hr>
+                <h4>Review:</h4>
+                <form class="form-horizontal">
+                  <input type="text" class="form-control" placeholder="Name"><br>
+                  <select class="form-control"><br>
+                    <option>Excellent</option>
+                    <option>Very Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                    <option>Terrible</option>
+                  </select><br>
+                  <textarea class="form-control" placeholder="Review this park" rows="3"></textarea>
+                  <br><button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <hr>
+                <div class="fakeReview">
+                  <p><strong>Jane Doe</strong></p>
+                  <p>Rating: Excellent</p>
+                  <p>Alberta Park is a great little park to take the family on a picnic, watch soccer or other games. It has a great playground with swings a mini climbing wall a big sandbox and other kid-friendly activities.</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div id="buckmanFieldModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h3 class="modal-title">Buckman Field Park</h3>
+              </div>
+              <div class="modal-body">
+                <img class="modalImg" src="img/buckmanField.jpg" alt="" />
+                <h4>Address: 300 NE 12th Ave, Portland, OR 97232</h4>
+                <h4>Amenities: picnic area, baseball field, playground, soccer field.</h4>
+                <hr>
+
+                <h4>About This Park:</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <hr>
+                <h4>Review:</h4>
+                <form class="form-horizontal">
+                  <input type="text" class="form-control" placeholder="Name"><br>
+                  <select class="form-control"><br>
+                    <option>Excellent</option>
+                    <option>Very Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                    <option>Terrible</option>
+                  </select><br>
+                  <textarea class="form-control" placeholder="Review this park" rows="3"></textarea>
+                  <br><button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <hr>
+                <div class="fakeReview">
+                  <p><strong>Jane Doe</strong></p>
+                  <p>Rating: Excellent</p>
+                  <p>Buckman Field Park is a great little park to take the family on a picnic, watch soccer or other games. It has a great playground with swings a mini climbing wall a big sandbox and other kid-friendly activities.</p>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="laurelhurstModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h3 class="modal-title">Laurelhurst Park</h3>
+              </div>
+              <div class="modal-body">
+                <img class="modalImg" src="img/laurelhurst.jpg" alt="" />
+                <h4>Address: 3756 SE Oak St, Portland, OR 97214</h4>
+                <h4>Amenities: picnic area, restrooms, tennis courts, basketball court, horseshoe pit, off leash dog area, paved paths, playground, soccer field. </h4>
+                <hr>
+
+                <h4>About This Park:</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <hr>
+                <h4>Review:</h4>
+                <form class="form-horizontal">
+                  <input type="text" class="form-control" placeholder="Name"><br>
+                  <select class="form-control"><br>
+                    <option>Excellent</option>
+                    <option>Very Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                    <option>Terrible</option>
+                  </select><br>
+                  <textarea class="form-control" placeholder="Review this park" rows="3"></textarea>
+                  <br><button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <hr>
+                <div class="fakeReview">
+                  <p><strong>Jane Doe</strong></p>
+                  <p>Rating: Excellent</p>
+                  <p>Laurelhurst Park is a great little park to take the family on a picnic, watch soccer or other games. It has a great playground with swings a mini climbing wall a big sandbox and other kid-friendly activities.</p>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="taborModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h3 class="modal-title">Mt. Tabor Park</h3>
+              </div>
+              <div class="modal-body">
+                <img class="modalImg" src="img/tabor.jpg" alt="" />
+                <h4>Address: SE Salmon St, Portland, OR 97215</h4>
+                <h4>Amenities: picnic area, restrooms, tennis courts, basketball courts, horseshoe pit, off leash dog area, natural area, hiking trails, paved paths, playground.</h4>
+                <hr>
+
+                <h4>About This Park:</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <hr>
+                <h4>Review:</h4>
+                <form class="form-horizontal">
+                  <input type="text" class="form-control" placeholder="Name"><br>
+                  <select class="form-control"><br>
+                    <option>Excellent</option>
+                    <option>Very Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                    <option>Terrible</option>
+                  </select><br>
+                  <textarea class="form-control" placeholder="Review this park" rows="3"></textarea>
+                  <br><button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <hr>
+                <div class="fakeReview">
+                  <p><strong>Jane Doe</strong></p>
+                  <p>Rating: Excellent</p>
+                  <p>Mt. Tabor Park is a great little park to take the family on a picnic, watch soccer or other games. It has a great playground with swings a mini climbing wall a big sandbox and other kid-friendly activities.</p>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="gabrielModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h3 class="modal-title">Gabriel Park</h3>
+              </div>
+              <div class="modal-body">
+                <img class="modalImg" src="img/gabriel.jpg" alt="" />
+                <h4>Address: SW Vermont St, Portland, OR 97219</h4>
+                <h4>Amenities: picnic area, restrooms, tennis courts, baseball field, basketball court, off leash dog area, paved paths, playground, skatepark, soccer field. </h4>
+                <hr>
+
+                <h4>About This Park:</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <hr>
+                <h4>Review:</h4>
+                <form class="form-horizontal">
+                  <input type="text" class="form-control" placeholder="Name"><br>
+                  <select class="form-control"><br>
+                    <option>Excellent</option>
+                    <option>Very Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                    <option>Terrible</option>
+                  </select><br>
+                  <textarea class="form-control" placeholder="Review this park" rows="3"></textarea>
+                  <br><button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <hr>
+                <div class="fakeReview">
+                  <p><strong>Jane Doe</strong></p>
+                  <p>Rating: Excellent</p>
+                  <p>Gabriel Park is a great little park to take the family on a picnic, watch soccer or other games. It has a great playground with swings a mini climbing wall a big sandbox and other kid-friendly activities.</p>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tryonModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h3 class="modal-title">Tryon Creek State Park</h3>
+              </div>
+              <div class="modal-body">
+                <img class="modalImg" src="img/tryon.jpg" alt="" />
+                <h4>Address: Tryon Creek State Natural Area, Portland, OR 97219</h4>
+                <h4>Amenities: picnic area, restrooms, natural area, hiking trails, paved paths.</h4>
+                <hr>
+
+                <h4>About This Park:</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <hr>
+                <h4>Review:</h4>
+                <form class="form-horizontal">
+                  <input type="text" class="form-control" placeholder="Name"><br>
+                  <select class="form-control"><br>
+                    <option>Excellent</option>
+                    <option>Very Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                    <option>Terrible</option>
+                  </select><br>
+                  <textarea class="form-control" placeholder="Review this park" rows="3"></textarea>
+                  <br><button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <hr>
+                <div class="fakeReview">
+                  <p><strong>Jane Doe</strong></p>
+                  <p>Rating: Excellent</p>
+                  <p>Tryon Creek State Park is a great little park to take the family on a picnic, watch soccer or other games. It has a great playground with swings a mini climbing wall a big sandbox and other kid-friendly activities.</p>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="forestModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h3 class="modal-title">Forest Park</h3>
+              </div>
+              <div class="modal-body">
+                <img class="modalImg" src="img/forestPark.jpg" alt="" />
+                <h4>Address: Portland, OR 97231</h4>
+                <h4>Amenities: natural area, hiking trails, restrooms, paved paths.</h4>
+                <hr>
+
+                <h4>About This Park:</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <hr>
+                <h4>Review:</h4>
+                <form class="form-horizontal">
+                  <input type="text" class="form-control" placeholder="Name"><br>
+                  <select class="form-control"><br>
+                    <option>Excellent</option>
+                    <option>Very Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                    <option>Terrible</option>
+                  </select><br>
+                  <textarea class="form-control" placeholder="Review this park" rows="3"></textarea>
+                  <br><button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <hr>
+                <div class="fakeReview">
+                  <p><strong>Jane Doe</strong></p>
+                  <p>Rating: Excellent</p>
+                  <p>Forest Park is a great little park to take the family on a picnic, watch soccer or other games. It has a great playground with swings a mini climbing wall a big sandbox and other kid-friendly activities.</p>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="jamisonModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h3 class="modal-title">Jamison Square</h3>
+              </div>
+              <div class="modal-body">
+                <img class="modalImg" src="img/jamison.jpg" alt="" />
+                <h4>Address: 810 NW 11th Ave, Portland, OR 97209</h4>
+                <h4>Amenities: restrooms, fountain. </h4>
+                <hr>
+
+                <h4>About This Park:</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <hr>
+                <h4>Review:</h4>
+                <form class="form-horizontal">
+                  <input type="text" class="form-control" placeholder="Name"><br>
+                  <select class="form-control"><br>
+                    <option>Excellent</option>
+                    <option>Very Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                    <option>Terrible</option>
+                  </select><br>
+                  <textarea class="form-control" placeholder="Review this park" rows="3"></textarea>
+                  <br><button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <hr>
+                <div class="fakeReview">
+                  <p><strong>Jane Doe</strong></p>
+                  <p>Rating: Excellent</p>
+                  <p>Jamison Square is a great little park to take the family on a picnic, watch soccer or other games. It has a great playground with swings a mini climbing wall a big sandbox and other kid-friendly activities.</p>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
