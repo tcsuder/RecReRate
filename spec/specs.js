@@ -24,34 +24,16 @@ describe('Park', function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 describe('Review', function() {
-  it("creates a new park review with the given specifications", function (){
+  it("creates a new park review with the given specifications", function() {
     var testReview = new Review ("Jane", "Excellent", "Great park for kids and dogs.");
     expect(testReview.name).to.equal("Jane");
     expect(testReview.rating).to.equal("Excellent");
     expect(testReview.comment).to.be.a("string");
+  });
+
+  it("creates the fullReview method to combine and style inputs from the user's review", function() {
+    var testReview = new Review ("Jane", "Excellent", "Great park for kids and dogs.");
+    expect(testReview.fullReview()).to.equal("<p><strong>Jane</strong></p><p>Rating:Excellent</p><p>Great park for kids and dogs.</p>");
   });
 });
