@@ -1,3 +1,10 @@
+/* ===============================HEADER*/
+.jumbotron {
+  margin-bottom: 0;
+}
+
+
+
 /* ===============================FRONT PAGE BUTTONS*/
 #search, #browse {
   display: none;
@@ -22,4 +29,25 @@
 
 .modalImg {
   max-width: 100%;
+}
+
+
+
+/* ===================================STICKY FOOTER*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: black;
+  color: #C0C0C0;
 }
