@@ -187,7 +187,7 @@ $(document).ready(function() {
     var userReview = new Review (userName, userRating, userComment);
 
     $("input#reviewName").val("");
-    $("select#reviewRating").val("");
+    $("select#reviewRating").val("Excellent");
     $("textarea#reviewComment").val("");
 
   });
