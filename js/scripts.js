@@ -28,28 +28,28 @@ alberta.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLea
 buckmanField.amenities = ["picnic", "baseballField", "playground", "soccerField"];
 buckmanField.activities = ["baseball", "kickball", "soccer", "frisbee", "ballSports"];
 
-grant.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "fountain", "naturalArea", "paths", "playground", "skatepark", "pool"];
-grant.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLeash", "fountain", "pavedPaths", "skateboarding", "poolSwimming"];
+grant.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "fountain", "paths", "playground", "soccerField", "pool"];
+grant.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLeash",  "pavedPaths", "soccer", "frisbee", "ballSports", "poolSwimming"];
 // SOUTHEAST
 laurelhurst.amenities = ["picnic", "restroom", "tennisCourt", "basketballCourt", "horseshoePit", "dogArea", "paths", "playground", "soccerField"];
 laurelhurst.activities = ["tennis", "basketball", "horseshoe", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
 
 tabor.amenities = ["picnic", "restroom", "tennisCourt", "basketballCourt", "horseshoePit", "dogArea", "naturalArea", "paths", "playground"];
-tabor.activities = ["tennis", "basketball", "horseshoe", "dogOffLeash", "wildlife", "hikingTrails", "pavedPaths"];
+tabor.activities = ["tennis", "basketball", "horseshoe", "dogOffLeash", "wildlife", "hikingTrails", "pavedPaths", "frisbee"];
 
 // SOUTHWEST
 gabriel.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "paths", "playground", "skatepark", "soccerField"];
-gabriel.activities = ["tennis", "baseball", "kickball", "basketball", "fountain", "pavedPaths", "skateboarding", "soccer", "frisbee", "ballSports"];
+gabriel.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLeash",  "pavedPaths", "skateboarding", "soccer", "frisbee", "ballSports"];
 
 tryon.amenities = ["picnic", "restroom", "naturalArea", "paths"];
 tryon.activities = ["wildlife", "hikingTrails", "pavedPaths"];
 
 // NORTHWEST
-forest.amenities = ["restroom", "naturalArea", "paths"];
+forest.amenities = ["naturalArea", "paths"];
 forest.activities = ["wildlife", "hikingTrails"];
 
 jamison.amenities = ["restroom", "fountain"];
-jamison.activities = ["fountain"];
+
 
 var allParks = [arborLodge, overlook, peninsula, alberta, buckmanField, grant, laurelhurst, tabor, gabriel, tryon, forest, jamison];
 
