@@ -58,6 +58,12 @@ body {
   cursor:pointer;
 }
 
+#browse {
+  border: 5px solid black;
+  padding: 5%;
+  background-color: white;
+  opacity: .8;
+}
 
 /* ===================================MODALS*/
 
