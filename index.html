@@ -50,8 +50,16 @@
         <input type="checkbox" name="location" class="location" value="northWest"> Northwest
         <input type="checkbox" name="location" class="location" value="southEast"> Southeast
         <input type="checkbox" name="location" class="location" value="southWest"> Southwest
-
-        <h3>Amenities</h3>
+        <div class="row">
+          <div class="col-sm-4">
+            <h3>Amenities</h3>
+          </div>
+          <div class="col-sm-4">
+          </div>
+          <div class="col-sm-4">
+            <h3>Park Matches</h3>
+          </div>
+        </div>
         <div class="row">
           <div class="col-sm-4">
             <input type="checkbox" name="amenity" class="amenity" value="picnic"> Picnic Area<br>
@@ -72,8 +80,17 @@
             <input type="checkbox" name="amenity" class="amenity" value="soccerField"> Soccer Field<br>
             <input type="checkbox" name="amenity" class="amenity" value="pool"> Swimming Pool<br>
           </div>
+          <div class="col-sm-4">
+            <ul id="parkMatchesList">
+
+            </ul>
+          </div>
         </div>
-        <h3>Activities</h3>
+        <div class="row">
+          <div class="col-sm-4">
+              <h3>Activities</h3>
+          </div>
+        </div>
         <div class="row">
           <div class="col-sm-4">
             <input type="checkbox" name="activity" class="activity" value="tennis"> Tennis<br>
@@ -110,7 +127,7 @@
         <li class="park-click" id="overlook" data-toggle="modal" data-target="#overlookModal">Overlook Park</li>
         <li class="park-click" id="cathedral">Cathedral Park</li>
         <li class="park-click" id="kelleyPoint">Kelley Point Park</li>
-        <li class="park-click" id="penninsula" data-toggle="modal" data-target="#peninsulaModal">Penninsula Park</li>
+        <li class="park-click" id="peninsula" data-toggle="modal" data-target="#peninsulaModal">Penninsula Park</li>
         <li class="park-click" id="pier">Pier Park</li>
       </ul>
       <h3>Northeast Portland</h3>
