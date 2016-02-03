@@ -44,6 +44,14 @@ body {
   opacity: .8;
 }
 
+#parkMatchesList {
+  padding: 0;
+}
+
+#search-col {
+  padding:0;
+}
+
 /* ===================================BROWSE PAGE*/
 .park-click {
   list-style-type: none;
@@ -57,8 +65,12 @@ body {
   cursor:pointer;
 }
 
-#brows ul li {
+#browse ul li {
   width: 12%;
+}
+
+#browse ul {
+  padding: 0;
 }
 
 #browse {
