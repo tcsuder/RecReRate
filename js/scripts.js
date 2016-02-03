@@ -61,34 +61,44 @@ function Park(parkName, parkLocation) {
   this.parkLocation = parkLocation;
 }
 
-userChosenParks = [];
+returnedParkLocations = [];
+userPreferenceMatches = [];
 
 var parkCompiler = function(location) {
   for (var i = 0; i < allParks.length; i++) {
     if (location === allParks[i].parkLocation) {
-      userChosenParks.push(allParks[i]);
+      returnedParkLocations.push(allParks[i]);
     }
   }
-  return userChosenParks;
+  return returnedParkLocations;
 }
 
 var amenitiesFinder = function(amenity) {
-  for (var i = userChosenParks.length - 1; i >=0 ; i--) {
-    if (userChosenParks[i].amenities.indexOf(amenity) === -1) {
-      userChosenParks.splice(i, 1);
+  returnedParkLocations = [arborLodge, overlook, peninsula];
+  for (var i = returnedParkLocations.length - 1; i >= 0; i--) {
+    if (returnedParkLocations[i].amenities.indexOf(amenity) === -1) {
+      returnedParkLocations.splice(i, 1);
+    } else {
+      userPreferenceMatches.push(returnedParkLocations[i]);
     }
   }
-  return userChosenParks;
+  return userPreferenceMatches;
 }
 
 var activitiesFinder = function(activity) {
-    debugger;
-  for (var i = userChosenParks.length - 1; i >=0 ; i--) {
-    if (userChosenParks[i].activities.indexOf(activity) === -1) {
-      userChosenParks.splice(i, 1);
+  debugger;
+  console.log(returnedParkLocations);
+  returnedParkLocations = [arborLodge, overlook, peninsula];
+  console.log(returnedParkLocations);
+  for (var i = returnedParkLocations.length - 1; i >= 0 ; i--) {
+    if (returnedParkLocations[i].activities.indexOf(activity) === -1) {
+      returnedParkLocations.splice(i, 1);
+    } else {
+      userPreferenceMatches.push(returnedParkLocations[i]);
     }
   }
-  return userChosenParks;
+  console.log(userPreferenceMatches);
+  return returnedParkLocations;
 }
 
 
@@ -149,7 +159,7 @@ $(document).ready(function() {
     for (var i = 0; i < activities.length; i++) {
       activitiesFinder(activities[i]);
     }
-    console.log(userChosenParks);
+    console.log(returnedParkLocations);
   });
 
   $("form.form-horizontal").submit(function(event) {
