@@ -50,51 +50,71 @@
         <input type="checkbox" name="location" class="location" value="northWest"> Northwest
         <input type="checkbox" name="location" class="location" value="southEast"> Southeast
         <input type="checkbox" name="location" class="location" value="southWest"> Southwest
+        <div class="row">
+          <div class="col-sm-8">
+            <h3>Amenities</h3>
+            <div class="row">
+              <div class="col-sm-6">
+                <input type="checkbox" name="amenity" class="amenity" value="picnic"> Picnic Area<br>
+                <input type="checkbox" name="amenity" class="amenity" value="restroom"> Restrooms<br>
+                <input type="checkbox" name="amenity" class="amenity" value="tennisCourt"> Tennis Court<br>
+                <input type="checkbox" name="amenity" class="amenity" value="baseballField"> Baseball Field<br>
+                <input type="checkbox" name="amenity" class="amenity" value="basketballCourt"> Basketball Court<br>
+                <input type="checkbox" name="amenity" class="amenity" value="waterAccess"> Water Access<br>
+                <input type="checkbox" name="amenity" class="amenity" value="horseshoePit"> Horseshoe Pit<br>
+                <input type="checkbox" name="amenity" class="amenity" value="dogArea"> Off leash Dog area<br>
+              </div>
+              <div class ="col-sm-6">
+                <input type="checkbox" name="amenity" class="amenity" value="fountain"> Fountain<br>
+                <input type="checkbox" name="amenity" class="amenity" value="naturalArea"> Natural Area<br>
+                <input type="checkbox" name="amenity" class="amenity" value="paths"> Hiking trails/walking paths<br>
+                <input type="checkbox" name="amenity" class="amenity" value="playground"> Playground<br>
+                <input type="checkbox" name="amenity" class="amenity" value="skatepark"> Skatepark<br>
+                <input type="checkbox" name="amenity" class="amenity" value="soccerField"> Soccer Field<br>
+                <input type="checkbox" name="amenity" class="amenity" value="pool"> Swimming Pool<br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                  <h3>Activities</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <input type="checkbox" name="activity" class="activity" value="tennis"> Tennis</input><br>
+                <input type="checkbox" name="activity" class="activity" value="baseball"> Baseball<br>
+                <input type="checkbox" name="activity" class="activity" value="kickball"> Kickball<br>
+                <input type="checkbox" name="activity" class="activity" value="basketball"> Basketball<br>
+                <input type="checkbox" name="activity" class="activity" value="riverSwimming"> River Swimming<br>
+                <input type="checkbox" name="activity" class="activity" value="kayaking"> Kayaking/Canoeing<br>
+                <input type="checkbox" name="activity" class="activity" value="boatLaunch"> Boat Launch/Dock<br>
+                <input type="checkbox" name="activity" class="activity" value="horseshoe"> Horseshoe<br>
+                <input type="checkbox" name="activity" class="activity" value="dogOffLeash"> Off Leash Dog Exercise<br>
+              </div>
+              <div class="col-sm-6">
+                <input type="checkbox" name="activity" class="activity" value="wildlife"> Wildlife/Bird Watching<br>
+                <input type="checkbox" name="activity" class="activity" value="hikingTrails"> Hiking Trails<br>
+                <input type="checkbox" name="activity" class="activity" value="pavedPaths"> Paved Paths<br>
+                <input type="checkbox" name="activity" class="activity" value="skateboarding"> Skateboarding<br>
+                <input type="checkbox" name="activity" class="activity" value="soccer"> Soccer<br>
+                <input type="checkbox" name="activity" class="activity" value="frisbee"> Frisbee<br>
+                <input type="checkbox" name="activity" class="activity" value="ballSports"> Other Ball Sports<br>
+                <input type="checkbox" name="activity" class="activity" value="poolSwimming"> Pool Swimming<br>
+              </div>
+            </div>
+          </div>
+          <h3>Park Matches</h3>
+          <div class="col-sm-4">
+            <div class="row">
+              <div id="search-col" class="col-sm-6">
+                <ul id="parkMatchesList">
 
-        <h3>Amenities</h3>
-        <div class="row">
-          <div class="col-sm-4">
-            <input type="checkbox" name="amenity" class="amenity" value="picnic"> Picnic Area<br>
-            <input type="checkbox" name="amenity" class="amenity" value="restroom"> Restrooms<br>
-            <input type="checkbox" name="amenity" class="amenity" value="tennisCourt"> Tennis Court<br>
-            <input type="checkbox" name="amenity" class="amenity" value="baseballField"> Baseball Field<br>
-            <input type="checkbox" name="amenity" class="amenity" value="basketballCourt"> Basketball Court<br>
-            <input type="checkbox" name="amenity" class="amenity" value="waterAccess"> Water Access<br>
-            <input type="checkbox" name="amenity" class="amenity" value="horseshoePit"> Horseshoe Pit<br>
-            <input type="checkbox" name="amenity" class="amenity" value="dogArea"> Off leash Dog area<br>
-          </div>
-          <div class ="col-sm-4">
-            <input type="checkbox" name="amenity" class="amenity" value="fountain"> Fountain<br>
-            <input type="checkbox" name="amenity" class="amenity" value="naturalArea"> Natural Area<br>
-            <input type="checkbox" name="amenity" class="amenity" value="paths"> Hiking trails/walking paths<br>
-            <input type="checkbox" name="amenity" class="amenity" value="playground"> Playground<br>
-            <input type="checkbox" name="amenity" class="amenity" value="skatepark"> Skatepark<br>
-            <input type="checkbox" name="amenity" class="amenity" value="soccerField"> Soccer Field<br>
-            <input type="checkbox" name="amenity" class="amenity" value="pool"> Swimming Pool<br>
-          </div>
-        </div>
-        <h3>Activities</h3>
-        <div class="row">
-          <div class="col-sm-4">
-            <input type="checkbox" name="activity" class="activity" value="tennis"> Tennis<br>
-            <input type="checkbox" name="activity" class="activity" value="baseball"> Baseball<br>
-            <input type="checkbox" name="activity" class="activity" value="kickball"> Kickball<br>
-            <input type="checkbox" name="activity" class="activity" value="basketball"> Basketball<br>
-            <input type="checkbox" name="activity" class="activity" value="riverSwimming"> River Swimming<br>
-            <input type="checkbox" name="activity" class="activity" value="kayaking"> Kayaking/Canoeing<br>
-            <input type="checkbox" name="activity" class="activity" value="boatLaunch"> Boat Launch/Dock<br>
-            <input type="checkbox" name="activity" class="activity" value="horseshoe"> Horseshoe<br>
-            <input type="checkbox" name="activity" class="activity" value="dogOffLeash"> Off Leash Dog Exercise<br>
-          </div>
-          <div class="col-sm-4">
-            <input type="checkbox" name="activity" class="activity" value="wildlife"> Wildlife/Bird Watching<br>
-            <input type="checkbox" name="activity" class="activity" value="hikingTrails"> Hiking Trails<br>
-            <input type="checkbox" name="activity" class="activity" value="pavedPaths"> Paved Paths<br>
-            <input type="checkbox" name="activity" class="activity" value="skateboarding"> Skateboarding<br>
-            <input type="checkbox" name="activity" class="activity" value="soccer"> Soccer<br>
-            <input type="checkbox" name="activity" class="activity" value="frisbee"> Frisbee<br>
-            <input type="checkbox" name="activity" class="activity" value="ballSports"> Other Ball Sports<br>
-            <input type="checkbox" name="activity" class="activity" value="poolSwimming"> Pool Swimming<br>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+
+              </div>
+            </div>
           </div>
         </div>
         <button type="submit" class="btn btn-lg btn-primary">Find me a park!</button>
