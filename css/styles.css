@@ -1,4 +1,4 @@
-/* ===============================HEADER*/
+ /*===============================HEADER*/
 .jumbotron {
   margin-bottom: 0;
 }
@@ -8,7 +8,7 @@
   padding-top: 7em;
   padding-bottom: 9em;
   padding-left: 15%;
-  padding-right: 15%;
+  padding-right: 15%;*/
   /*border: 5px solid black;*/
   margin-top: 10em;
   margin-bottom: 10em;
@@ -88,14 +88,14 @@ html {
   min-height: 100%;
 }
 body {
-  /* Margin bottom by footer height */
+
   margin-bottom: 60px;
 }
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
+
   height: 60px;
   background-color: #222;
   color: #C0C0C0;
