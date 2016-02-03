@@ -45,11 +45,11 @@ tryon.amenities = ["picnic", "restroom", "naturalArea", "paths"];
 tryon.activities = ["wildlife", "hikingTrails", "pavedPaths"];
 
 // NORTHWEST
-forest.amenities = ["restroom", "naturalArea", "paths"];
+forest.amenities = ["naturalArea", "paths"];
 forest.activities = ["wildlife", "hikingTrails"];
 
 jamison.amenities = ["restroom", "fountain"];
-jamison.activities = ["fountain"];
+
 
 var allParks = [arborLodge, overlook, peninsula, alberta, buckmanField, grant, laurelhurst, tabor, gabriel, tryon, forest, jamison];
 
