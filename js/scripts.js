@@ -133,7 +133,6 @@ $(document).ready(function() {
 
   $("form.search-form").submit(function(event) {
     event.preventDefault();
-    debugger;
     var amenities = [];
     var activities = [];
     var locations = [];
@@ -143,7 +142,6 @@ $(document).ready(function() {
     });
     for (var i = 0; i < locations.length; i++) {
       parkCompiler(locations[i]);
-      console.log(returnedParkLocations);
     }
     if (userPreferenceMatches.length === 0) {
       for (var i = 0; i < returnedParkLocations.length; i++) {
