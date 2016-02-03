@@ -12,12 +12,11 @@ describe('Park', function() {
     expect(parkCompiler("north")).to.eql([arborLodge, overlook, peninsula])
   });
 
-  it("will remove parks that don't have amenities chosen by user", function() {
+  it("will add parks that have amenities chosen by user and remove parks that don't", function() {
     expect(amenitiesFinder("pool")).to.eql([peninsula])
   });
 
   it("will remove parks that don't have activities chose by the user", function() {
-    userChosenParks = [arborLodge, overlook, peninsula];
     expect(activitiesFinder("tennis")).to.eql([arborLodge, peninsula])
   });
 });
