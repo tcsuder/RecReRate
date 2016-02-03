@@ -110,7 +110,7 @@
         <li class="park-click" id="overlook" data-toggle="modal" data-target="#overlookModal">Overlook Park</li>
         <li class="park-click" id="cathedral">Cathedral Park</li>
         <li class="park-click" id="kelleyPoint">Kelley Point Park</li>
-        <li class="park-click" id="penninsula" data-toggle="modal" data-target="#peninsulaModal">Penninsula Park</li>
+        <li class="park-click" id="peninsula" data-toggle="modal" data-target="#peninsulaModal">Penninsula Park</li>
         <li class="park-click" id="pier">Pier Park</li>
       </ul>
       <h3>Northeast Portland</h3>
@@ -249,6 +249,58 @@
           </div>
         </div>
       </div>
+
+      <div id="peninsulaModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title">Peninsula Park</h3>
+            </div>
+            <div class="modal-body">
+              <img class="modalImg" src="img/peninsula.jpg" alt="" />
+              <h4>Address:  700 N Rosa Parks Way, Portland, OR 97217</h4>
+              <h4>Amenities: picnic area, restrooms, tennis court, baseball field, basketball court, horseshoe pit, fountain, paved paths, playground, soccer field, pool.</h4>
+              <hr>
+
+              <h4>About This Park:</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <hr>
+              <h4>Review:</h4>
+              <div class="newReview">
+                <form class="form-horizontal">
+                  <input id="reviewName" type="text" class="form-control" placeholder="Name"><br>
+                  <select id="reviewRating" class="form-control"><br>
+                    <option>Excellent</option>
+                    <option>Very Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                    <option>Terrible</option>
+                  </select><br>
+                  <textarea id="reviewComment" class="form-control" placeholder="Review this park" rows="3"></textarea>
+                   <br><button type="submit" class="btn btn-default">Submit</button>
+                </form>
+              </div>
+              <hr>
+              <div class="realUserReview">
+                <p><strong><span class="realUserName"></span></strong></p>
+                <p>Rating: <span class="realUserRating"></span></p>
+                <p><span class="realUserComment"></span></p>
+              </div>
+              <div class="fakeReview">
+                <p><strong>Jane Doe</strong></p>
+                <p>Rating: Excellent</p>
+                <p>Peninsula Park is a great little park to take the family on a picnic, watch soccer or other games. It has a great playground with swings a mini climbing wall a big sandbox and other kid-friendly activities.</p>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
       <div id="albertaModal" class="modal fade">
         <div class="modal-dialog">
