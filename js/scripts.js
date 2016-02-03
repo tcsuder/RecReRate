@@ -86,10 +86,8 @@ var amenitiesFinder = function(amenity) {
 }
 
 var activitiesFinder = function(activity) {
-  debugger;
-  console.log(returnedParkLocations);
   returnedParkLocations = [arborLodge, overlook, peninsula];
-  console.log(returnedParkLocations);
+  userPreferenceMatches = [];
   for (var i = returnedParkLocations.length - 1; i >= 0 ; i--) {
     if (returnedParkLocations[i].activities.indexOf(activity) === -1) {
       returnedParkLocations.splice(i, 1);
@@ -97,7 +95,6 @@ var activitiesFinder = function(activity) {
       userPreferenceMatches.push(returnedParkLocations[i]);
     }
   }
-  console.log(userPreferenceMatches);
   return returnedParkLocations;
 }
 
