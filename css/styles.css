@@ -26,13 +26,16 @@ body {
   opacity: .8;
 }
 
+
 /* ===============================FRONT PAGE BUTTONS*/
 #search, #browse {
   display: none;
 }
 
 /* ===================================SEARCH PAGE*/
-
+#search button{
+  margin-top: 2em;
+}
 
 /* ===================================BROWSE PAGE*/
 #browse ul li {
@@ -47,6 +50,18 @@ body {
   color: blue;
   cursor:pointer;
 }
+
+
+/* ===================================MODALS*/
+
+#arborLodgeModal {
+  background-color: lightblue;
+}
+
+#albertaModal {
+  background-color: lightblue;
+}
+
 
 .modalImg {
   max-width: 100%;
