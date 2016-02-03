@@ -74,41 +74,36 @@ var parkCompiler = function(location) {
 }
 
 var amenitiesFinder = function(amenity) {
-  returnedParkLocations = [arborLodge, overlook, peninsula];
   for (var i = returnedParkLocations.length - 1; i >= 0; i--) {
     if (returnedParkLocations[i].amenities.indexOf(amenity) === -1) {
       returnedParkLocations.splice(i, 1);
     } else {
+      if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
       userPreferenceMatches.push(returnedParkLocations[i]);
+      }
     }
   }
   return userPreferenceMatches;
 }
 
 var activitiesFinder = function(activity) {
-  debugger;
-  console.log(returnedParkLocations);
-  returnedParkLocations = [arborLodge, overlook, peninsula];
-  console.log(returnedParkLocations);
   for (var i = returnedParkLocations.length - 1; i >= 0 ; i--) {
     if (returnedParkLocations[i].activities.indexOf(activity) === -1) {
       returnedParkLocations.splice(i, 1);
     } else {
+      if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
       userPreferenceMatches.push(returnedParkLocations[i]);
+      }
     }
   }
-  console.log(userPreferenceMatches);
   return returnedParkLocations;
 }
-
-
 
 function Review(name, rating, comment) {
   this.name = name;
   this.rating = rating;
   this.comment = comment;
 }
-
 
 Review.prototype.fullReview = function () {
   return "<p><strong>" + this.name + "</strong></p>" +
@@ -117,11 +112,11 @@ Review.prototype.fullReview = function () {
 }
 
 
-
-
 //User Interface Logic
 
 $(document).ready(function() {
+
+  // Home Page Clicks
 
   $("button#search-button").click(function() {
       $("#search").slideDown();
@@ -133,8 +128,11 @@ $(document).ready(function() {
     $("#homePage").hide();
   });
 
+  // Search Submit
+
   $("form.search-form").submit(function(event) {
     event.preventDefault;
+
     var amenities = [];
     var activities = [];
     var locations = [];
@@ -159,10 +157,11 @@ $(document).ready(function() {
     for (var i = 0; i < activities.length; i++) {
       activitiesFinder(activities[i]);
     }
-    console.log(returnedParkLocations);
   });
 
   $("form.form-horizontal").submit(function(event) {
+    event.preventDefault();
+
     var userName = $("input#reviewName").val();
     var userRating = $("select#reviewRating").val();
     var userComment = $("textarea#reviewComment").val();
@@ -173,11 +172,6 @@ $(document).ready(function() {
     $("select#reviewRating").val("");
     $("textarea#reviewComment").val("");
 
-
-
-
-
-    event.preventDefault();
   });
 
 });
