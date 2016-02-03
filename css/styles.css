@@ -37,6 +37,13 @@ body {
   margin-top: 2em;
 }
 
+.search-form {
+  border: 5px solid black;
+  padding: 5%;
+  background-color: white;
+  opacity: .8;
+}
+
 /* ===================================BROWSE PAGE*/
 #browse ul li {
   list-style-type: none;
