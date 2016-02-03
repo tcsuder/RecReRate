@@ -39,7 +39,7 @@ tabor.activities = ["tennis", "basketball", "horseshoe", "dogOffLeash", "wildlif
 
 // SOUTHWEST
 gabriel.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "paths", "playground", "skatepark", "soccerField"];
-gabriel.activities = ["tennis", "baseball", "kickball", "basketball", "fountain", "pavedPaths", "skateboarding", "soccer", "frisbee", "ballSports"];
+gabriel.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLeash",  "pavedPaths", "skateboarding", "soccer", "frisbee", "ballSports"];
 
 tryon.amenities = ["picnic", "restroom", "naturalArea", "paths"];
 tryon.activities = ["wildlife", "hikingTrails", "pavedPaths"];
