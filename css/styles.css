@@ -1,10 +1,48 @@
+/* ===============================HEADER*/
+.jumbotron {
+  margin-bottom: 0;
+}
+
+/* ===============================HOMEPAGE*/
+#homePage {
+  padding-top: 7em;
+  padding-bottom: 9em;
+  padding-left: 15%;
+  padding-right: 15%;
+  /*border: 5px solid black;*/
+  margin-top: 10em;
+  margin-bottom: 10em;
+  /*background-image: url(../img/background1.jpg);*/
+}
+
+body {
+  background-image: url(../img/background1.jpg);
+}
+
+#homePageButtons {
+  border: 5px solid black;
+  padding: 10%;
+  background-color: white;
+  opacity: .8;
+}
+
+
 /* ===============================FRONT PAGE BUTTONS*/
 #search, #browse {
   display: none;
 }
 
 /* ===================================SEARCH PAGE*/
+#search button{
+  margin-top: 2em;
+}
 
+.search-form {
+  border: 5px solid black;
+  padding: 5%;
+  background-color: white;
+  opacity: .8;
+}
 
 /* ===================================BROWSE PAGE*/
 #browse ul li {
@@ -20,6 +58,45 @@
   cursor:pointer;
 }
 
+#browse {
+  border: 5px solid black;
+  padding: 5%;
+  background-color: white;
+  opacity: .8;
+}
+
+/* ===================================MODALS*/
+
+#arborLodgeModal {
+  background-color: lightblue;
+}
+
+#albertaModal {
+  background-color: lightblue;
+}
+
+
 .modalImg {
   max-width: 100%;
+}
+
+
+
+/* ===================================STICKY FOOTER*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #222;
+  color: #C0C0C0;
 }
