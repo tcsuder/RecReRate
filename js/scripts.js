@@ -60,10 +60,11 @@ function Park(parkName, parkId, parkLocation) {
   this.activities = [];
   this.review = [];
   this.parkLocation = parkLocation;
+  this.exclusiveSearch = "";
 }
 
-returnedParkLocations = [];
-userPreferenceMatches = [];
+var returnedParkLocations = [];
+var userPreferenceMatches = [];
 
 var parkCompiler = function(location) {
   for (var i = 0; i < allParks.length; i++) {
@@ -74,31 +75,52 @@ var parkCompiler = function(location) {
   return returnedParkLocations;
 }
 
-var amenitiesFinder = function(amenity) {
+var aFinder = function(a) {
+  debugger;
+  console.log(returnedParkLocations);
+  console.log(userPreferenceMatches);
   for (var i = returnedParkLocations.length - 1; i >= 0; i--) {
-    if (returnedParkLocations[i].amenities.indexOf(amenity) === -1) {
-      returnedParkLocations.splice(i, 1);
-    } else {
-      if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
+    if (returnedParkLocations[i].amenities.indexOf(a) === -1) {
+      if (returnedParkLocations[i].activities.indexOf(a) === -1) {
+        returnedParkLocations[i].parkName = "not";
+      } else if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
+        userPreferenceMatches.push(returnedParkLocations[i]);
+        }
+      } else if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
       userPreferenceMatches.push(returnedParkLocations[i]);
       }
     }
-  }
+  //   } else {
+  //     if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
+  //     userPreferenceMatches.push(returnedParkLocations[i]);
+  //     }
+  //   }
+  //   if (returnedParkLocations[i].activities.indexOf(a) === -1) {
+  //     returnedParkLocations[i].parkName = "not";
+  //   } else {
+  //     if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
+  //     userPreferenceMatches.push(returnedParkLocations[i]);
+  //     }
+  //   }
+  // }
   return userPreferenceMatches;
 }
 
-var activitiesFinder = function(activity) {
-  for (var i = returnedParkLocations.length - 1; i >= 0 ; i--) {
-    if (returnedParkLocations[i].activities.indexOf(activity) === -1) {
-      returnedParkLocations.splice(i, 1);
-    } else {
-      if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
-      userPreferenceMatches.push(returnedParkLocations[i]);
-      }
-    }
-  }
-  return returnedParkLocations;
-}
+// var activitiesFinder = function(activity) {
+//   debugger;
+//   console.log(returnedParkLocations);
+//   console.log(userPreferenceMatches);
+//   for (var i = returnedParkLocations.length - 1; i >= 0 ; i--) {
+//     if (returnedParkLocations[i].activities.indexOf(activity) === -1) {
+//       returnedParkLocations.splice(i, 1);
+//     } else {
+//       if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
+//       userPreferenceMatches.push(returnedParkLocations[i]);
+//       }
+//     }
+//   }
+//   return userPreferenceMatches;
+// }
 
 function Review(name, rating, comment) {
   this.name = name;
@@ -133,50 +155,65 @@ $(document).ready(function() {
 
   $("form.search-form").submit(function(event) {
   event.preventDefault();
-
-  var amenities = [];
-  var activities = [];
+  $("ul#parkMatchesList").empty();
+  debugger;
+  returnedParkLocations = [];
+  userPreferenceMatches = [];
+  var amenitiesAndActivities = [];
+  // var activities = [];
   var locations = [];
+  console.log(returnedParkLocations);
+  console.log(userPreferenceMatches);
 
   $.each($('input[name="location"]:checked'), function() {
     locations.push($(this).val());
   });
-  $.each($('input[name="amenity"]:checked'), function() {
-    amenities.push($(this).val());
-  });
-  $.each($('input[name="activity"]:checked'), function() {
-    activities.push($(this).val());
-  });
-
-
-
   for (var i = 0; i < locations.length; i++) {
     parkCompiler(locations[i]);
   }
-  if (activities.length === 0 && amenities.length === 0) {
+  $.each($('input[name="amenity"]:checked'), function() {
+    amenitiesAndActivities.push($(this).val());
+  });
+  $.each($('input[name="activity"]:checked'), function() {
+    amenitiesAndActivities.push($(this).val());
+  });
+
+
+  if (amenitiesAndActivities.length === 0) {
     for (var i = 0; i < returnedParkLocations.length; i++) {
       $("ul#parkMatchesList").append("<li class='park-click' id=" + returnedParkLocations[i].parkId + " data-toggle='modal' data-target='#" + returnedParkLocations[i].parkId + "Modal'>" + returnedParkLocations[i].parkName + "</li>");
     }
   } else if (returnedParkLocations.length === 0) {
     returnedParkLocations = allParks;
-    for (var i = 0; i < amenities.length; i++) {
-      amenitiesFinder(amenities[i]);
+    for (var i = 0; i < amenitiesAndActivities.length; i++) {
+      aFinder(amenitiesAndActivities[i]);
     }
-    for (var i = 0; i < activities.length; i++) {
-      activitiesFinder(activities[i]);
-    }
+    // for (var i = 0; i < activities.length; i++) {
+    //   activitiesFinder(activities[i]);
+    // }
     for (var i = 0; i < userPreferenceMatches.length; i++) {
-      $("ul#parkMatchesList").append("<li class='park-click' id=" + userPreferenceMatches[i].parkId + " data-toggle='modal' data-target='#" + userPreferenceMatches[i].parkId + "Modal'>" + userPreferenceMatches[i].parkName + "</li>");
+      $("ul#parkMatchesList").append( "<li class='park-click' id=" +
+                                      userPreferenceMatches[i].parkId +
+                                      " data-toggle='modal' data-target='#" +
+                                      userPreferenceMatches[i].parkId + "Modal'>" + userPreferenceMatches[i].parkName + "</li>");
     }
   } else {
-    for (var i = 0; i < amenities.length; i++) {
-      amenitiesFinder(amenities[i]);
+    for (var i = 0; i < amenitiesAndActivities.length; i++) {
+      aFinder(amenitiesAndActivities[i]);
     }
-    for (var i = 0; i < activities.length; i++) {
-      activitiesFinder(activities[i]);
-    }
+    // for (var i = 0; i < activities.length; i++) {
+    //   activitiesFinder(activities[i]);
+    // }
     for (var i = 0; i < userPreferenceMatches.length; i++) {
-      $("ul#parkMatchesList").append("<li class='park-click' id=" + userPreferenceMatches[i].parkId + " data-toggle='modal' data-target='#" + userPreferenceMatches[i].parkId + "Modal'>" + userPreferenceMatches[i].parkName + "</li>");
+      $("ul#parkMatchesList").append( "<li class='park-click' id=" +
+                                      userPreferenceMatches[i].parkId +
+                                      " data-toggle='modal' data-target='#" +
+                                      userPreferenceMatches[i].parkId + "Modal'>" + userPreferenceMatches[i].parkName + "</li>");
+    }
+  }
+  for (var j = returnedParkLocations.length - 1; j >= 0; j--) {
+    if (returnedParkLocations[j].parkName === "not") {
+      returnedParkLocations.splice(j,1);
     }
   }
 });
