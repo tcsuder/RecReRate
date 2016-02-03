@@ -1,15 +1,15 @@
-var arborLodge = new Park("Arbor Lodge", "north");
-var overlook = new Park("Overlook Park", "north");
-var peninsula = new Park("Peninsula Park", "north");
-var alberta = new Park("Alberta Park", "northEast");
-var buckmanField = new Park("Buckman Field Park", "northEast");
-var grant = new Park("Grant Park", "northEast");
-var laurelhurst = new Park("Laurelhurst Park", "southEast");
-var tabor = new Park("Mt. Tabor Park", "southEast");
-var gabriel = new Park("Gabriel Park", "southWest");
+var arborLodge = new Park("Arbor Lodge", "arborLodge", "north");
+var overlook = new Park("Overlook Park", "overlook", "north");
+var peninsula = new Park("Peninsula Park", "peninsula", "north");
+var alberta = new Park("Alberta Park", "alberta", "northEast");
+var buckmanField = new Park("Buckman Field Park", "buckmanField", "northEast");
+var grant = new Park("Grant Park", "grant", "northEast");
+var laurelhurst = new Park("Laurelhurst Park", "laurelhurst", "southEast");
+var tabor = new Park("Mt. Tabor Park", "tabor", "southEast");
+var gabriel = new Park("Gabriel Park", "gabriel", "southWest");
 var tryon = new Park("Tryon Creek State Park", "southWest");
-var forest = new Park("Forest Park", "northWest");
-var jamison = new Park("Jamison Square", "northWest");
+var forest = new Park("Forest Park", "forest", "northWest");
+var jamison = new Park("Jamison Square", "jamison", "northWest");
 
 // NORTH
 arborLodge.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "horseshoePit", "dogArea", "paths", "playground", "soccerField"];
@@ -53,8 +53,9 @@ jamison.activities = ["fountain"];
 
 var allParks = [arborLodge, overlook, peninsula, alberta, buckmanField, grant, laurelhurst, tabor, gabriel, tryon, forest, jamison];
 
-function Park(parkName, parkLocation) {
+function Park(parkName, parkId, parkLocation) {
   this.parkName = parkName;
+  this.parkId = parkId;
   this.amenities = [];
   this.activities = [];
   this.review = [];
@@ -131,8 +132,8 @@ $(document).ready(function() {
   // Search Submit
 
   $("form.search-form").submit(function(event) {
-    event.preventDefault;
-
+    event.preventDefault();
+    debugger;
     var amenities = [];
     var activities = [];
     var locations = [];
@@ -142,20 +143,29 @@ $(document).ready(function() {
     });
     for (var i = 0; i < locations.length; i++) {
       parkCompiler(locations[i]);
+      console.log(returnedParkLocations);
     }
+    if (userPreferenceMatches.length === 0) {
+      for (var i = 0; i < returnedParkLocations.length; i++) {
+        $("ul#parkMatchesList").append("<li class='park-click' id=" + returnedParkLocations[i].parkId + " data-toggle='modal' data-target='#" + returnedParkLocations[i].parkId + "Modal'>" + returnedParkLocations[i].parkName + "</li>");
+      }
+    } else {
+      $.each($('input[name="amenity"]:checked'), function() {
+        amenities.push($(this).val());
+      });
+      for (var i = 0; i < amenities.length; i++) {
+        amenitiesFinder(amenities[i]);
+      }
 
-    $.each($('input[name="amenity"]:checked'), function() {
-      amenities.push($(this).val());
-    });
-    for (var i = 0; i < amenities.length; i++) {
-      amenitiesFinder(amenities[i]);
-    }
-
-    $.each($('input[name="activity"]:checked'), function() {
-      activities.push($(this).val());
-    });
-    for (var i = 0; i < activities.length; i++) {
-      activitiesFinder(activities[i]);
+      $.each($('input[name="activity"]:checked'), function() {
+        activities.push($(this).val());
+      });
+      for (var i = 0; i < activities.length; i++) {
+        activitiesFinder(activities[i]);
+      }
+      for (var i = 0; i < userPreferenceMatches.length; i++) {
+        $("ul#parkMatchesList").append("<li class='park-click' id=" + userPreferenceMatches[i].parkId + " data-toggle='modal' data-target='#" + userPreferenceMatches[i].parkId + "Modal'>" + userPreferenceMatches[i].parkName + "</li>");
+      }
     }
   });
 
