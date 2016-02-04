@@ -213,34 +213,26 @@ $(document).ready(function() {
   $("form.form-horizontal").submit(function(event) {
     event.preventDefault();
 
-    var userName = $("input#reviewName").val();
-    var userRating = $("select#reviewRating").val();
-    var userComment = $("textarea#reviewComment").val();
+    var reviewId = this.id;
+    var foundPark;
+    for (var i= 0; i < allParks.length; i++) {
+      if (allParks[i].parkId === reviewId) {
+        foundPark = allParks[i];
+      }
+    };
+
+    var userName = $("input#" + reviewId + "ReviewName").val();
+    var userRating = $("select#" + reviewId + "ReviewRating").val();
+    var userComment = $("textarea#" + reviewId + "ReviewComment").val();
     var userReview = new Review (userName, userRating, userComment);
-console.log((this.id));
-console.log(allParks);
-var reviewId = this.id;
-var foundPark;
-for (var i= 0; i < allParks.length; i++) {
-console.log(reviewId);
+    foundPark.review.push(userReview);
 
-  if (allParks[i].parkId === reviewId) {
-    foundPark = allParks[i];
-  }
-  // return foundPark;
-
-
-};
-  foundPark.review.push(userReview);
-  console.log(foundPark.review)
-  console.log(userReview.fullReview())
 
     $("#" + reviewId + "Modal .realUserReview").prepend(userReview.fullReview());
-    // $("#arborLodgeModal .realUserReview").prepend(userReview.fullReview());
 
-    // $("input#reviewName").val("");
-    // $("select#reviewRating").val("Excellent");
-    // $("textarea#reviewComment").val("");
+    $("input#" + reviewId + "ReviewName").val("");
+    $("select#" + reviewId + "ReviewRating").val("Excellent");
+    $("textarea#" + reviewId + "ReviewComment").val("");
 
   });
 
