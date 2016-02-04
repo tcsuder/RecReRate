@@ -1,7 +1,12 @@
  /*===============================HEADER*/
-.jumbotron {
+#header{
   margin-bottom: 0;
+  font-family: 'Cabin Sketch', cursive;
+  background-color: #2F3B1B;
+  padding-bottom: 1em;
+  color:white;
 }
+
 
 /* ===============================HOMEPAGE*/
 #homePage {
@@ -9,21 +14,30 @@
   padding-bottom: 9em;
   padding-left: 15%;
   padding-right: 15%;*/
-  /*border: 5px solid black;*/
+  border: 5px solid black;
   margin-top: 10em;
   margin-bottom: 10em;
-  /*background-image: url(../img/background1.jpg);*/
 }
 
 body {
-  background-image: url(../img/background1.jpg);
+  background-image: url(../img/background4.jpg);
+  font-family: 'Open Sans', sans-serif;
 }
 
 #homePageButtons {
-  border: 5px solid black;
   padding: 10%;
   background-color: white;
   opacity: .8;
+}
+
+#homePageButtons h3 {
+  padding-bottom: 1em;
+}
+
+body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* =======================================NAV BAR AND FRONT PAGE BUTTONS*/
@@ -36,10 +50,29 @@ body {
   display: none;
 }
 
+#browse-button {
+  background-color: #969150;
+  color: white;
+}
+
+#browse-button:hover {
+  background-color: #B0AA5E;
+}
+
+#search-button {
+  background-color: #4A5C2A;
+  color: white;
+}
+
+#search-button:hover {
+  background-color: #5A7033;
+}
 
 /* ===================================SEARCH PAGE*/
 #search button{
   margin-top: 2em;
+  background-color: #4A5C2A;
+  color: white;
 }
 
 .search-form {
@@ -65,7 +98,7 @@ body {
 .park-click {
   list-style-type: none;
   text-decoration: underline;
-  color: #00CDCD;
+  color: #4A5C2A;
 }
 
 .park-click:hover {
@@ -91,14 +124,6 @@ body {
 
 /* ===================================MODALS*/
 
-#arborLodgeModal {
-  background-color: lightblue;
-}
-
-#albertaModal {
-  background-color: lightblue;
-}
-
 
 .modalImg {
   max-width: 100%;
@@ -112,7 +137,6 @@ html {
   min-height: 100%;
 }
 body {
-
   margin-bottom: 60px;
 }
 .footer {
