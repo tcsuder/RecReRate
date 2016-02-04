@@ -64,8 +64,15 @@ function Park(parkName, parkId, parkLocation) {
   this.exclusiveSearch = "match";
 }
 
+function preferenceMatch(parkId) {
+  this.parkId = parkId;
+  this.activityMatchIndices;
+  this.amenityMatchIndices;
+}
+
 var returnedParkLocations = [];
 var userPreferenceMatches = [];
+var preferenceMatchIndices = [];
 
 var parkCompiler = function(location) {
   for (var i = 0; i < allParks.length; i++) {
@@ -77,16 +84,22 @@ var parkCompiler = function(location) {
 }
 
 var preferenceFinder = function(amenitiesAndActivities) {
+  debugger;
   for (var i = returnedParkLocations.length - 1; i >= 0; i--) {
+    parkMatch = new preferenceMatch(returnedParkLocations[i].parkId)
     if (returnedParkLocations[i].amenities.indexOf(amenitiesAndActivities) === -1) {
       if (returnedParkLocations[i].activities.indexOf(amenitiesAndActivities) === -1) {
         returnedParkLocations[i].exclusiveSearch = "not";
       } else if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
         userPreferenceMatches.push(returnedParkLocations[i]);
+        parkMatch.activityMatchIndices = returnedParkLocations[i].activities.indexOf(amenitiesAndActivities);
         }
       } else if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
       userPreferenceMatches.push(returnedParkLocations[i]);
+      parkMatch.amenityMatchIndices = returnedParkLocations[i].amenities.indexOf(amenitiesAndActivities);
       }
+      preferenceMatchIndices.push(parkMatch);
+      console.log(parkMatch);
     }
   return userPreferenceMatches;
 }
@@ -94,7 +107,8 @@ var preferenceFinder = function(amenitiesAndActivities) {
 var fullSearchResult = function(park) {
   return  "<li class='park-click' id=" + park.parkId +
           " data-toggle='modal' data-target='#" +
-          park.parkId + "Modal'>" + park.parkName + "</li>"
+          park.parkId + "Modal'>" + park.parkName + "</li>" +
+          "<ul id = 'preferenceMatch'></ul>"
 }
 
 function Review(name, rating, comment) {
@@ -160,6 +174,7 @@ $(document).ready(function() {
 
     returnedParkLocations = [];
     userPreferenceMatches = [];
+    preferenceMatchIndices = [];
     var amenitiesAndActivities = [];
     var locations = [];
 
@@ -211,7 +226,11 @@ $(document).ready(function() {
         for (var i = 0; i < userPreferenceMatches.length; i++) {
           $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
         }
-      } // both locations and amenities or activities selected
+      }
+      for (var i = 0; i <= userPreferenceMatches.length; i++) {
+
+      }
+       // both locations and amenities or activities selected
     } else {
         for (var i = 0; i < amenitiesAndActivities.length; i++) {
           preferenceFinder(amenitiesAndActivities[i]);
