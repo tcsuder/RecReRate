@@ -13,25 +13,6 @@
       <h1>Portland Parks Review</h1>
     </div>
 
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">PPR</a>
-        <div class='navbar-header'>
-         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
-             <span class="sr-only">Toggle navigation</span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-          </button>
-        </div>
-        <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
-         <li><a href="#Home">Home</a></li>
-         <li><a href="#search">Search Parks</a></li>
-         <li><a href="#browse">Browse Parks</a></li>
-        </ul>
-      </div>
-    </nav>
-
     <div id="homePage" class="container">
       <div id="homePageButtons">
         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
@@ -41,130 +22,167 @@
       </div>
     </div>
 
-
-    <div id="search" class="container">
-      <form class="search-form">
-        <h3>Location</h3>
-        <input type="checkbox" name="location" class="location" value="north"> North
-        <input type="checkbox" name="location" class="location" value="northEast"> Northeast
-        <input type="checkbox" name="location" class="location" value="northWest"> Northwest
-        <input type="checkbox" name="location" class="location" value="southEast"> Southeast
-        <input type="checkbox" name="location" class="location" value="southWest"> Southwest
-        <div class="row">
-          <div class="col-sm-8">
-            <h3>Amenities</h3>
-            <div class="row">
-              <div class="col-sm-6">
-                <input type="checkbox" name="amenity" class="amenity" value="picnic"> Picnic Area<br>
-                <input type="checkbox" name="amenity" class="amenity" value="restroom"> Restrooms<br>
-                <input type="checkbox" name="amenity" class="amenity" value="tennisCourt"> Tennis Court<br>
-                <input type="checkbox" name="amenity" class="amenity" value="baseballField"> Baseball Field<br>
-                <input type="checkbox" name="amenity" class="amenity" value="basketballCourt"> Basketball Court<br>
-                <input type="checkbox" name="amenity" class="amenity" value="waterAccess"> Water Access<br>
-                <input type="checkbox" name="amenity" class="amenity" value="horseshoePit"> Horseshoe Pit<br>
-                <input type="checkbox" name="amenity" class="amenity" value="dogArea"> Off leash Dog area<br>
-              </div>
-              <div class ="col-sm-6">
-                <input type="checkbox" name="amenity" class="amenity" value="fountain"> Fountain<br>
-                <input type="checkbox" name="amenity" class="amenity" value="naturalArea"> Natural Area<br>
-                <input type="checkbox" name="amenity" class="amenity" value="paths"> Hiking trails/walking paths<br>
-                <input type="checkbox" name="amenity" class="amenity" value="playground"> Playground<br>
-                <input type="checkbox" name="amenity" class="amenity" value="skatepark"> Skatepark<br>
-                <input type="checkbox" name="amenity" class="amenity" value="soccerField"> Soccer Field<br>
-                <input type="checkbox" name="amenity" class="amenity" value="pool"> Swimming Pool<br>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6">
-                  <h3>Activities</h3>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <input type="checkbox" name="activity" class="activity" value="tennis"> Tennis</input><br>
-                <input type="checkbox" name="activity" class="activity" value="baseball"> Baseball<br>
-                <input type="checkbox" name="activity" class="activity" value="kickball"> Kickball<br>
-                <input type="checkbox" name="activity" class="activity" value="basketball"> Basketball<br>
-                <input type="checkbox" name="activity" class="activity" value="riverSwimming"> River Swimming<br>
-                <input type="checkbox" name="activity" class="activity" value="kayaking"> Kayaking/Canoeing<br>
-                <input type="checkbox" name="activity" class="activity" value="boatLaunch"> Boat Launch/Dock<br>
-                <input type="checkbox" name="activity" class="activity" value="horseshoe"> Horseshoe<br>
-                <input type="checkbox" name="activity" class="activity" value="dogOffLeash"> Off Leash Dog Exercise<br>
-              </div>
-              <div class="col-sm-6">
-                <input type="checkbox" name="activity" class="activity" value="wildlife"> Wildlife/Bird Watching<br>
-                <input type="checkbox" name="activity" class="activity" value="hikingTrails"> Hiking Trails<br>
-                <input type="checkbox" name="activity" class="activity" value="pavedPaths"> Paved Paths<br>
-                <input type="checkbox" name="activity" class="activity" value="skateboarding"> Skateboarding<br>
-                <input type="checkbox" name="activity" class="activity" value="soccer"> Soccer<br>
-                <input type="checkbox" name="activity" class="activity" value="frisbee"> Frisbee<br>
-                <input type="checkbox" name="activity" class="activity" value="ballSports"> Other Ball Sports<br>
-                <input type="checkbox" name="activity" class="activity" value="poolSwimming"> Pool Swimming<br>
-              </div>
-            </div>
+    <div id="search-and-nav">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">PPR</a>
+          <div class='navbar-header'>
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
           </div>
-          <h3>Park Matches</h3>
-          <div class="col-sm-4">
-            <div class="row">
-              <div id="search-col" class="col-sm-6">
-                <ul id="parkMatchesList">
-
-                </ul>
-              </div>
-              <div class="col-sm-6">
-
-              </div>
-            </div>
-          </div>
+          <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+           <li><a id="navbar-search">Search Parks</a></li>
+           <li><a id="navbar-browse">Browse Parks</a></li>
+          </ul>
         </div>
-        <button type="submit" class="btn btn-lg btn-primary">Find me a park!</button>
-      </form>
+      </nav>
+      <div id="search" class="container">
+        <form class="search-form">
+          <h3>Location</h3>
+          <input type="checkbox" name="location" class="location" value="north"> North
+          <input type="checkbox" name="location" class="location" value="northEast"> Northeast
+          <input type="checkbox" name="location" class="location" value="northWest"> Northwest
+          <input type="checkbox" name="location" class="location" value="southEast"> Southeast
+          <input type="checkbox" name="location" class="location" value="southWest"> Southwest
+          <div class="row">
+            <div class="col-sm-8">
+              <h3>Amenities</h3>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="checkbox" name="amenity" class="amenity" value="picnic"> Picnic Area<br>
+                  <input type="checkbox" name="amenity" class="amenity" value="restroom"> Restrooms<br>
+                  <input type="checkbox" name="amenity" class="amenity" value="tennisCourt"> Tennis Court<br>
+                  <input type="checkbox" name="amenity" class="amenity" value="baseballField"> Baseball Field<br>
+                  <input type="checkbox" name="amenity" class="amenity" value="basketballCourt"> Basketball Court<br>
+                  <input type="checkbox" name="amenity" class="amenity" value="waterAccess"> Water Access<br>
+                  <input type="checkbox" name="amenity" class="amenity" value="horseshoePit"> Horseshoe Pit<br>
+                  <input type="checkbox" name="amenity" class="amenity" value="dogArea"> Off leash Dog area<br>
+                </div>
+                <div class ="col-sm-6">
+                  <input type="checkbox" name="amenity" class="amenity" value="fountain"> Fountain<br>
+                  <input type="checkbox" name="amenity" class="amenity" value="naturalArea"> Natural Area<br>
+                  <input type="checkbox" name="amenity" class="amenity" value="paths"> Hiking trails/walking paths<br>
+                  <input type="checkbox" name="amenity" class="amenity" value="playground"> Playground<br>
+                  <input type="checkbox" name="amenity" class="amenity" value="skatepark"> Skatepark<br>
+                  <input type="checkbox" name="amenity" class="amenity" value="soccerField"> Soccer Field<br>
+                  <input type="checkbox" name="amenity" class="amenity" value="pool"> Swimming Pool<br>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                    <h3>Activities</h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="checkbox" name="activity" class="activity" value="tennis"> Tennis</input><br>
+                  <input type="checkbox" name="activity" class="activity" value="baseball"> Baseball<br>
+                  <input type="checkbox" name="activity" class="activity" value="kickball"> Kickball<br>
+                  <input type="checkbox" name="activity" class="activity" value="basketball"> Basketball<br>
+                  <input type="checkbox" name="activity" class="activity" value="riverSwimming"> River Swimming<br>
+                  <input type="checkbox" name="activity" class="activity" value="kayaking"> Kayaking/Canoeing<br>
+                  <input type="checkbox" name="activity" class="activity" value="boatLaunch"> Boat Launch/Dock<br>
+                  <input type="checkbox" name="activity" class="activity" value="horseshoe"> Horseshoe<br>
+                  <input type="checkbox" name="activity" class="activity" value="dogOffLeash"> Off Leash Dog Exercise<br>
+                </div>
+                <div class="col-sm-6">
+                  <input type="checkbox" name="activity" class="activity" value="wildlife"> Wildlife/Bird Watching<br>
+                  <input type="checkbox" name="activity" class="activity" value="hikingTrails"> Hiking Trails<br>
+                  <input type="checkbox" name="activity" class="activity" value="pavedPaths"> Paved Paths<br>
+                  <input type="checkbox" name="activity" class="activity" value="skateboarding"> Skateboarding<br>
+                  <input type="checkbox" name="activity" class="activity" value="soccer"> Soccer<br>
+                  <input type="checkbox" name="activity" class="activity" value="frisbee"> Frisbee<br>
+                  <input type="checkbox" name="activity" class="activity" value="ballSports"> Other Ball Sports<br>
+                  <input type="checkbox" name="activity" class="activity" value="poolSwimming"> Pool Swimming<br>
+                </div>
+              </div>
+            </div>
+            <div id="search-results">
+              <h3>Search Results</h3>
+              <div class="col-sm-4">
+                <div class="row">
+                  <div id="search-col1" class="col-sm-6">
+                    <ul id="parkMatchesList">
+
+                    </ul>
+                  </div>
+                  <div class="col-sm-6">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-lg btn-primary">Find me a park!</button>
+        </form>
+      </div>
     </div>
 
-
-
-    <div id="browse" class="container">
-      <h3>North Portland</h3>
-      <ul>
-        <li class="park-click" id="arborLodge" data-toggle="modal" data-target="#arborLodgeModal">Arbor Lodge</li>
-        <li class="park-click" id="overlook" data-toggle="modal" data-target="#overlookModal">Overlook Park</li>
-        <li class="park-click" id="cathedral">Cathedral Park</li>
-        <li class="park-click" id="kelleyPoint">Kelley Point Park</li>
-        <li class="park-click" id="peninsula" data-toggle="modal" data-target="#peninsulaModal">Penninsula Park</li>
-        <li class="park-click" id="pier">Pier Park</li>
-      </ul>
-      <h3>Northeast Portland</h3>
-      <ul>
-        <li class="park-click" id="alberta" data-toggle="modal" data-target="#albertaModal">Alberta Park</li>
-        <li class="park-click" id="buckmanField" data-toggle="modal" data-target="#buckmanFieldModal">Buckman Field Park</li>
-        <li class="park-click" id="glenhaven">Glenhaven Park</li>
-        <li class="park-click" id="grant" data-toggle="modal" data-target="#grantModal">Grant Park</li>
-        <li class="park-click" id="rockyButte">Rocky Butte Natural Area</li>
-      </ul>
-      <h3>Southeast Portland</h3>
-      <ul>
-        <li class="park-click" id="laurelhurst" data-toggle="modal" data-target="#laurelhurstModal">Laurelhurst Park</li>
-        <li class="park-click" id="tabor" data-toggle="modal" data-target="#taborModal">Mt. Tabor</li>
-        <li class="park-click" id="oaksBottom">Oaks Bottom Wildlife Refuge</li>
-        <li class="park-click" id="powellButte">Powell Butte</li>
-        <li class="park-click" id="sellwoodRiver">Sellwood Riverfront Park</li>
-        <li class="park-click" id="springWater">Spring Water Corridor</li>
-        <li class="park-click" id="woodstock">Woodstock Park</li>
-      </ul>
-      <h3>Southwest Portland</h3>
-      <ul>
-        <li class="park-click" id="gabriel" data-toggle="modal" data-target="#gabrielModal">Gabriel Park</li>
-        <li class="park-click" id="tryon" data-toggle="modal" data-target="#tryonModal">Tryon Creek State Park</li>
-        <li class="park-click" id="washington">Washington Park</li>
-        <li class="park-click" id="waterfront">Waterfront Park</li>
-      </ul>
-      <h3>Northwest Portland</h3>
-      <ul>
-        <li class="park-click" id="forest" data-toggle="modal" data-target="#forestModal">Forest Park</li>
-        <li class="park-click" id="jamison" data-toggle="modal" data-target="#jamisonModal">Jamison Square</li>
-        <li class="park-click" id="pittock">Pittock Mansion</li>
-        <li class="park-click" id="wallace">Wallace Park</li>
-      </ul>
+    <div id="browse-and-nav">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">PPR</a>
+          <div class='navbar-header'>
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+          </div>
+          <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+           <li><a id="navbar-search">Search Parks</a></li>
+           <li><a id="navbar-browse">Browse Parks</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div id="browse" class="container">
+        <h3>North Portland</h3>
+        <ul>
+          <li class="park-click" id="arborLodge" data-toggle="modal" data-target="#arborLodgeModal">Arbor Lodge</li>
+          <li class="park-click" id="overlook" data-toggle="modal" data-target="#overlookModal">Overlook Park</li>
+          <li class="park-click" id="cathedral">Cathedral Park</li>
+          <li class="park-click" id="kelleyPoint">Kelley Point Park</li>
+          <li class="park-click" id="peninsula" data-toggle="modal" data-target="#peninsulaModal">Penninsula Park</li>
+          <li class="park-click" id="pier">Pier Park</li>
+        </ul>
+        <h3>Northeast Portland</h3>
+        <ul>
+          <li class="park-click" id="alberta" data-toggle="modal" data-target="#albertaModal">Alberta Park</li>
+          <li class="park-click" id="buckmanField" data-toggle="modal" data-target="#buckmanFieldModal">Buckman Field Park</li>
+          <li class="park-click" id="glenhaven">Glenhaven Park</li>
+          <li class="park-click" id="grant" data-toggle="modal" data-target="#grantModal">Grant Park</li>
+          <li class="park-click" id="rockyButte">Rocky Butte Natural Area</li>
+        </ul>
+        <h3>Southeast Portland</h3>
+        <ul>
+          <li class="park-click" id="laurelhurst" data-toggle="modal" data-target="#laurelhurstModal">Laurelhurst Park</li>
+          <li class="park-click" id="tabor" data-toggle="modal" data-target="#taborModal">Mt. Tabor</li>
+          <li class="park-click" id="oaksBottom">Oaks Bottom Wildlife Refuge</li>
+          <li class="park-click" id="powellButte">Powell Butte</li>
+          <li class="park-click" id="sellwoodRiver">Sellwood Riverfront Park</li>
+          <li class="park-click" id="springWater">Spring Water Corridor</li>
+          <li class="park-click" id="woodstock">Woodstock Park</li>
+        </ul>
+        <h3>Southwest Portland</h3>
+        <ul>
+          <li class="park-click" id="gabriel" data-toggle="modal" data-target="#gabrielModal">Gabriel Park</li>
+          <li class="park-click" id="tryon" data-toggle="modal" data-target="#tryonModal">Tryon Creek State Park</li>
+          <li class="park-click" id="washington">Washington Park</li>
+          <li class="park-click" id="waterfront">Waterfront Park</li>
+        </ul>
+        <h3>Northwest Portland</h3>
+        <ul>
+          <li class="park-click" id="forest" data-toggle="modal" data-target="#forestModal">Forest Park</li>
+          <li class="park-click" id="jamison" data-toggle="modal" data-target="#jamisonModal">Jamison Square</li>
+          <li class="park-click" id="pittock">Pittock Mansion</li>
+          <li class="park-click" id="wallace">Wallace Park</li>
+        </ul>
+      </div>
     </div>
 
 
