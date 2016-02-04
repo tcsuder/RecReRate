@@ -144,7 +144,8 @@ $(document).ready(function() {
 
   $("form.search-form").submit(function(event) {
     event.preventDefault();
-    $("ul#parkMatchesList").empty();
+    $("ul#parkMatchesList1").empty();
+    $("ul#parkMatchesList2").empty();
 
     returnedParkLocations = [];
     userPreferenceMatches = [];
