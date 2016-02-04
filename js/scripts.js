@@ -123,8 +123,8 @@ function Park(parkName, parkId, parkLocation) {
 
 function preferenceMatch(parkId) {
   this.parkId = parkId;
-  this.activityMatchIndices;
-  this.amenityMatchIndices;
+  this.activityMatchIndices = -1;
+  this.amenityMatchIndices = -1;
 }
 
 var returnedParkLocations = [];
@@ -141,31 +141,36 @@ var parkCompiler = function(location) {
 }
 
 var preferenceFinder = function(amenitiesAndActivities) {
-  debugger;
   for (var i = returnedParkLocations.length - 1; i >= 0; i--) {
-    parkMatch = new preferenceMatch(returnedParkLocations[i].parkId)
     if (returnedParkLocations[i].amenities.indexOf(amenitiesAndActivities) === -1) {
-      if (returnedParkLocations[i].activities.indexOf(amenitiesAndActivities) === -1) {
-        returnedParkLocations[i].exclusiveSearch = "not";
-      } else if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
-        userPreferenceMatches.push(returnedParkLocations[i]);
-        parkMatch.activityMatchIndices = returnedParkLocations[i].activities.indexOf(amenitiesAndActivities);
+        if (returnedParkLocations[i].activities.indexOf(amenitiesAndActivities) === -1) {
+          returnedParkLocations[i].exclusiveSearch = "not";
+        } else {
+          parkMatch = new preferenceMatch(returnedParkLocations[i].parkId)
+          parkMatch.activityMatchIndices = returnedParkLocations[i].activities.indexOf(amenitiesAndActivities);
+          preferenceMatchIndices.push(parkMatch);
+          if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
+            userPreferenceMatches.push(returnedParkLocations[i]);
+          }
         }
-      } else if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
-      userPreferenceMatches.push(returnedParkLocations[i]);
+    } else {
+      parkMatch = new preferenceMatch(returnedParkLocations[i].parkId)
       parkMatch.amenityMatchIndices = returnedParkLocations[i].amenities.indexOf(amenitiesAndActivities);
-      }
       preferenceMatchIndices.push(parkMatch);
-      console.log(parkMatch);
+      if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
+        userPreferenceMatches.push(returnedParkLocations[i]);
+        }
+      }
     }
   return userPreferenceMatches;
 }
+
 
 var fullSearchResult = function(park) {
   return  "<li class='park-click' id=" + park.parkId +
           " data-toggle='modal' data-target='#" +
           park.parkId + "Modal'>" + park.parkName + "</li>" +
-          "<ul id = 'preferenceMatch'></ul>"
+          "<ul id = '" + park.parkId + "PreferenceMatch'></ul>"
 }
 
 function Review(name, rating, comment) {
@@ -274,14 +279,28 @@ $(document).ready(function() {
       if (userPreferenceMatches.length > 10) {
         var upmFirstHalf = Math.ceil(userPreferenceMatches.length / 2);
         for (var i = 0; i < upmFirstHalf; i++) {
-          $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
+          $("ul#parkMatchesList1").append(fullSearchResult(userPreferenceMatches[i]));
         }
         for (var i = upmFirstHalf; i < userPreferenceMatches.length; i++) {
-          $("ul#parkMatchesList2").append(fullSearchResult(returnedParkLocations[i]));
+          $("ul#parkMatchesList2").append(fullSearchResult(userPreferenceMatches[i]));
         }
       } else {
         for (var i = 0; i < userPreferenceMatches.length; i++) {
-          $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
+          $("ul#parkMatchesList1").append(fullSearchResult(userPreferenceMatches[i]));
+          for (var j = 0; j < preferenceMatchIndices.length; j++) {
+            if (preferenceMatchIndices[j].parkId === userPreferenceMatches[i].parkId) {
+              if (preferenceMatchIndices[j].amenityMatchIndices > -1) {
+                $("ul#" + userPreferenceMatches[i].parkId + "PreferenceMatch").append("<li>" + userPreferenceMatches[i].amenities[preferenceMatchIndices[j].amenityMatchIndices] + "</li>");
+              }
+            }
+          }
+          for (var j = 0; j < preferenceMatchIndices.length; j++) {
+            if (preferenceMatchIndices[j].parkId === userPreferenceMatches[i].parkId) {
+              if (preferenceMatchIndices[j].activityMatchIndices > -1) {
+                $("ul#" + userPreferenceMatches[i].parkId + "PreferenceMatch").append("<li>" + userPreferenceMatches[i].activities[preferenceMatchIndices[j].activityMatchIndices] + "</li>");
+              }
+            }
+          }
         }
       }
       for (var i = 0; i <= userPreferenceMatches.length; i++) {
@@ -295,14 +314,14 @@ $(document).ready(function() {
         if (userPreferenceMatches.length > 10) {
           var upmFirstHalf = Math.ceil(userPreferenceMatches.length / 2);
           for (var i = 0; i < upmFirstHalf; i++) {
-            $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
+            $("ul#parkMatchesList1").append(fullSearchResult(userPreferenceMatches[i]));
           }
           for (var i = upmFirstHalf; i < userPreferenceMatches.length; i++) {
-            $("ul#parkMatchesList2").append(fullSearchResult(returnedParkLocations[i]));
+            $("ul#parkMatchesList2").append(fullSearchResult(userPreferenceMatches[i]));
           }
         } else {
           for (var i = 0; i < userPreferenceMatches.length; i++) {
-            $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
+            $("ul#parkMatchesList1").append(fullSearchResult(userPreferenceMatches[i]));
           }
         }
       }
