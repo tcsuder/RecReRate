@@ -25,10 +25,13 @@ body {
 }
 
 #homePageButtons {
-  border: 5px solid black;
   padding: 10%;
   background-color: white;
   opacity: .8;
+}
+
+#homePageButtons h3 {
+  padding-bottom: 1em;
 }
 
 body img {
@@ -134,7 +137,6 @@ html {
   min-height: 100%;
 }
 body {
-
   margin-bottom: 60px;
 }
 .footer {
