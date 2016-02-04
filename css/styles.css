@@ -26,11 +26,16 @@ body {
   opacity: .8;
 }
 
+/* =======================================NAV BAR AND FRONT PAGE BUTTONS*/
 
-/* ===============================FRONT PAGE BUTTONS*/
-#search, #browse {
+.navbar {
+  border-radius: 0;
+}
+
+#search-and-nav, #browse-and-nav {
   display: none;
 }
+
 
 /* ===================================SEARCH PAGE*/
 #search button{
@@ -44,11 +49,15 @@ body {
   opacity: .8;
 }
 
+#search-results {
+  display: none;
+}
+
 #parkMatchesList {
   padding: 0;
 }
 
-#search-col {
+#search-col1 {
   padding:0;
 }
 
