@@ -1,15 +1,29 @@
 var arborLodge = new Park("Arbor Lodge", "arborLodge", "north");
 var overlook = new Park("Overlook Park", "overlook", "north");
+var cathedral = new Park ("Cathedral Park", "cathedral", "north");
+var kelleyPoint = new Park ("Kelley Point Park", "kelleyPoint", "north");
+var pier = new Park ("Pier Park", "pier", "north");
 var peninsula = new Park("Peninsula Park", "peninsula", "north");
 var alberta = new Park("Alberta Park", "alberta", "northEast");
 var buckmanField = new Park("Buckman Field Park", "buckmanField", "northEast");
+var glenhaven = new Park ("Glenhaven Park", "glenhaven", "northEast");
+var rockyButte = new Park ("Rocky Butte Natural Area", "rockyButte", "northEast");
 var grant = new Park("Grant Park", "grant", "northEast");
 var laurelhurst = new Park("Laurelhurst Park", "laurelhurst", "southEast");
 var tabor = new Park("Mt. Tabor Park", "tabor", "southEast");
+var oaksBottom = new Park ("Oaks Bottom Wildlife Refuge", "oaksBottom", "southEast");
+var powellButte = new Park ("Powell Butte", "powellButte", "southEast");
+var sellwoodRiver = new Park ("Sellwood Riverfront Park", "sellwood", "southEast");
+var springWater = new Park ("Spring Water Corridor", "springWater", "southEast");
+var woodstock = new Park ("Woodstock Park", "woodstock", "southEast");
 var gabriel = new Park("Gabriel Park", "gabriel", "southWest");
 var tryon = new Park("Tryon Creek State Park", "tryon", "southWest");
+var washington = new Park ("Washington Park", "washington", "southWest");
+var waterfront = new Park ("waterfront Park", "waterfront", "southWest");
 var forest = new Park("Forest Park", "forest", "northWest");
 var jamison = new Park("Jamison Square", "jamison", "northWest");
+var pittock = new Park ("Pittock Mansion", "pittock", "northWest");
+var wallace = new Park ("Wallace Park", "wallace", "northWest");
 
 // NORTH
 arborLodge.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "horseshoePit", "dogArea", "paths", "playground", "soccerField"];
@@ -17,7 +31,16 @@ arborLodge.activities = ["tennis", "baseball", "kickball", "horseshoe", "dogOffL
 
 
 overlook.amenities = ["picnic", "restroom", "baseballField", "basketballCourt", "dogArea", "paths", "playground", "soccerField"];
-overlook.activities = ["baseball", "kickball", "basketball", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"]
+overlook.activities = ["baseball", "kickball", "basketball", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
+
+cathedral.amenities = ["picnic", "restroom", "waterAccess", "dogArea", "naturalArea", "paths"];
+cathedral.activities = ["riverSwimming", "kayaking", "boatLaunch", "dogOffLeash", "wildlife", "pavedPaths"];
+
+kelleyPoint.amenities = ["picnic", "restroom", "waterAccess", "dogArea", "naturalArea", "paths"];
+kelleyPoint.activities = ["riverSwimming", "kayaking", "dogOffLeash", "wildlife", "hikingTrails", "pavedPaths"];
+
+pier.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "fountain", "paths", "playground", "skatepark", "soccerField", "pool"];
+pier.activities = ["tennis", "baseball", "kickball", "basketball", "pavedPaths", "skateboarding", "soccer", "frisbee", "ballSports", "poolSwimming"];
 
 peninsula.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "horseshoePit", "fountain", "paths", "playground", "soccerField", "pool"];
 peninsula.activities = ["tennis", "baseball", "kickball", "basketball", "horseshoe", "pavedPaths", "soccer", "frisbee", "ballSports", "poolSwimming"];
@@ -29,14 +52,36 @@ alberta.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLea
 buckmanField.amenities = ["picnic", "baseballField", "playground", "soccerField"];
 buckmanField.activities = ["baseball", "kickball", "soccer", "frisbee", "ballSports"];
 
+glenhaven.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "paths", "playground", "skatepark", "soccerField"];
+glenhaven.activities = ["tennis", "baseball", "kickball", "pavedPaths", "skateboarding", "soccer", "frisbee", "ballSports"];
+
+rockyButte.amenities = ["naturalArea", "paths"];
+rockyButte.activities = ["wildlife", "hikingTrails", "pavedPaths"];
+
 grant.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "fountain", "paths", "playground", "soccerField", "pool"];
 grant.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLeash",  "pavedPaths", "soccer", "frisbee", "ballSports", "poolSwimming"];
+
 // SOUTHEAST
 laurelhurst.amenities = ["picnic", "restroom", "tennisCourt", "basketballCourt", "horseshoePit", "dogArea", "paths", "playground", "soccerField"];
 laurelhurst.activities = ["tennis", "basketball", "horseshoe", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
 
 tabor.amenities = ["picnic", "restroom", "tennisCourt", "basketballCourt", "horseshoePit", "dogArea", "naturalArea", "paths", "playground"];
 tabor.activities = ["tennis", "basketball", "horseshoe", "dogOffLeash", "wildlife", "hikingTrails", "pavedPaths", "frisbee"];
+
+oaksBottom.amenities = ["naturalArea", "paths"];
+oaksBottom.activities = ["wildlife", "hikingTrails", "pavedPaths"];
+
+powellButte.amenities = ["restroom", "naturalArea", "paths"];
+powellButte.activities = ["wildlife", "hikingTrails", "pavedPaths"];
+
+sellwoodRiver.amenities = ["picnic", "restroom", "waterAccess", "dogArea", "paths"];
+sellwoodRiver.activities = ["kayaking", "boatLaunch", "dogOffLeash", "hikingTrails", "pavedPaths", "frisbee"];
+
+springWater.amenities = ["picnic", "restroom", "naturalArea", "paths"];
+springWater.activities = ["wildlife", "hikingTrails", "pavedPaths"];
+
+woodstock.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "horseshoePit", "dogArea", "paths", "playground", "soccerField"];
+woodstock.activities = ["tennis", "baseball", "kickball", "basketball", "horseshoe", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
 
 // SOUTHWEST
 gabriel.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "paths", "playground", "skatepark", "soccerField"];
@@ -45,14 +90,26 @@ gabriel.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLea
 tryon.amenities = ["picnic", "restroom", "naturalArea", "paths"];
 tryon.activities = ["wildlife", "hikingTrails", "pavedPaths"];
 
+washington.amenities = ["picnic", "restroom", "tennisCourt", "naturalArea", "paths", "playground", "soccerField"];
+washington.activities = ["tennis", "wildlife", "hikingTrails", "pavedPaths", "soccer", "frisbee", "ballSports"];
+
+waterfront.amenities = ["restroom", "waterAccess", "fountain", "paths"];
+waterfront.activities = ["boatLaunch", "pavedPaths", "frisbee"];
+
 // NORTHWEST
 forest.amenities = ["naturalArea", "paths"];
 forest.activities = ["wildlife", "hikingTrails"];
 
 jamison.amenities = ["restroom", "fountain"];
 
+pittock.amenities = ["picnic", "restroom", "paths", ""];
+pittock.activities = ["hikingTrails", "pavedPaths"];
 
-var allParks = [arborLodge, overlook, peninsula, alberta, buckmanField, grant, laurelhurst, tabor, gabriel, tryon, forest, jamison];
+wallace.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "paths", "playground", "soccerField"];
+wallace.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
+
+
+var allParks = [arborLodge, overlook, cathedral, kelleyPoint, pier, peninsula, alberta, buckmanField, glenhaven, rockyButte, grant, laurelhurst, tabor, oaksBottom, powellButte, sellwoodRiver, springWater, woodstock, gabriel, tryon, washington, waterfront, forest, jamison, pittock, wallace];
 
 function Park(parkName, parkId, parkLocation) {
   this.parkName = parkName;
@@ -64,8 +121,15 @@ function Park(parkName, parkId, parkLocation) {
   this.exclusiveSearch = "match";
 }
 
+function preferenceMatch(parkId) {
+  this.parkId = parkId;
+  this.activityMatchIndices;
+  this.amenityMatchIndices;
+}
+
 var returnedParkLocations = [];
 var userPreferenceMatches = [];
+var preferenceMatchIndices = [];
 
 var parkCompiler = function(location) {
   for (var i = 0; i < allParks.length; i++) {
@@ -77,18 +141,31 @@ var parkCompiler = function(location) {
 }
 
 var preferenceFinder = function(amenitiesAndActivities) {
+  debugger;
   for (var i = returnedParkLocations.length - 1; i >= 0; i--) {
+    parkMatch = new preferenceMatch(returnedParkLocations[i].parkId)
     if (returnedParkLocations[i].amenities.indexOf(amenitiesAndActivities) === -1) {
       if (returnedParkLocations[i].activities.indexOf(amenitiesAndActivities) === -1) {
         returnedParkLocations[i].exclusiveSearch = "not";
       } else if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
         userPreferenceMatches.push(returnedParkLocations[i]);
+        parkMatch.activityMatchIndices = returnedParkLocations[i].activities.indexOf(amenitiesAndActivities);
         }
       } else if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
       userPreferenceMatches.push(returnedParkLocations[i]);
+      parkMatch.amenityMatchIndices = returnedParkLocations[i].amenities.indexOf(amenitiesAndActivities);
       }
+      preferenceMatchIndices.push(parkMatch);
+      console.log(parkMatch);
     }
   return userPreferenceMatches;
+}
+
+var fullSearchResult = function(park) {
+  return  "<li class='park-click' id=" + park.parkId +
+          " data-toggle='modal' data-target='#" +
+          park.parkId + "Modal'>" + park.parkName + "</li>" +
+          "<ul id = 'preferenceMatch'></ul>"
 }
 
 function Review(name, rating, comment) {
@@ -144,10 +221,17 @@ $(document).ready(function() {
 
   $("form.search-form").submit(function(event) {
     event.preventDefault();
-    $("ul#parkMatchesList").empty();
+    $("ul#parkMatchesList1").empty();
+    $("ul#parkMatchesList2").empty();
+
+    // reset exclusive search function
+    allParks.forEach(function(park) {
+      park.exclusiveSearch = "match";
+    });
 
     returnedParkLocations = [];
     userPreferenceMatches = [];
+    preferenceMatchIndices = [];
     var amenitiesAndActivities = [];
     var locations = [];
 
@@ -164,43 +248,64 @@ $(document).ready(function() {
       amenitiesAndActivities.push($(this).val());
     });
 
-
+    // no amenities or activities selected
     if (amenitiesAndActivities.length === 0) {
-      if (returnedParkLocations.length > 15) {
+      if (returnedParkLocations.length > 10) {
         var rplFirstHalf = Math.ceil(returnedParkLocations.length / 2);
         for (var i = 0; i < rplFirstHalf; i++) {
-          $("ul#parkMatchesList1").append("<li class='park-click' id=" + returnedParkLocations[i].parkId + " data-toggle='modal' data-target='#" + returnedParkLocations[i].parkId + "Modal'>" + returnedParkLocations[i].parkName + "</li>");
+          $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
         }
         for (var i = rplFirstHalf; i < returnedParkLocations.length; i++) {
-          $("ul#parkMatchesList2").append("<li class='park-click' id=" + returnedParkLocations[i].parkId + " data-toggle='modal' data-target='#" + returnedParkLocations[i].parkId + "Modal'>" + returnedParkLocations[i].parkName + "</li>");
+          $("ul#parkMatchesList2").append(fullSearchResult(returnedParkLocations[i]));
         }
       } else {
         for (var i = 0; i < returnedParkLocations.length; i++) {
-          $("ul#parkMatchesList1").append("<li class='park-click' id=" + returnedParkLocations[i].parkId + " data-toggle='modal' data-target='#" + returnedParkLocations[i].parkId + "Modal'>" + returnedParkLocations[i].parkName + "</li>");
+
+          $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
+        }
+      } // no location selected
+    } else if (returnedParkLocations.length === 0) {
+      allParks.forEach(function(park) {
+        returnedParkLocations.push(park);
+      });
+      for (var i = 0; i < amenitiesAndActivities.length; i++) {
+        preferenceFinder(amenitiesAndActivities[i]);
+      }
+      if (userPreferenceMatches.length > 10) {
+        var upmFirstHalf = Math.ceil(userPreferenceMatches.length / 2);
+        for (var i = 0; i < upmFirstHalf; i++) {
+          $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
+        }
+        for (var i = upmFirstHalf; i < userPreferenceMatches.length; i++) {
+          $("ul#parkMatchesList2").append(fullSearchResult(returnedParkLocations[i]));
+        }
+      } else {
+        for (var i = 0; i < userPreferenceMatches.length; i++) {
+          $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
         }
       }
-    } else if (returnedParkLocations.length === 0) {
-      returnedParkLocations = allParks;
-      for (var i = 0; i < amenitiesAndActivities.length; i++) {
-        preferenceFinder(amenitiesAndActivities[i]);
+      for (var i = 0; i <= userPreferenceMatches.length; i++) {
+
       }
-      for (var i = 0; i < userPreferenceMatches.length; i++) {
-        $("ul#parkMatchesList").append( "<li class='park-click' id=" +
-                                        userPreferenceMatches[i].parkId +
-                                        " data-toggle='modal' data-target='#" +
-                                        userPreferenceMatches[i].parkId + "Modal'>" + userPreferenceMatches[i].parkName + "</li>");
-      }
+       // both locations and amenities or activities selected
     } else {
-      for (var i = 0; i < amenitiesAndActivities.length; i++) {
-        preferenceFinder(amenitiesAndActivities[i]);
+        for (var i = 0; i < amenitiesAndActivities.length; i++) {
+          preferenceFinder(amenitiesAndActivities[i]);
+        }
+        if (userPreferenceMatches.length > 10) {
+          var upmFirstHalf = Math.ceil(userPreferenceMatches.length / 2);
+          for (var i = 0; i < upmFirstHalf; i++) {
+            $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
+          }
+          for (var i = upmFirstHalf; i < userPreferenceMatches.length; i++) {
+            $("ul#parkMatchesList2").append(fullSearchResult(returnedParkLocations[i]));
+          }
+        } else {
+          for (var i = 0; i < userPreferenceMatches.length; i++) {
+            $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
+          }
+        }
       }
-      for (var i = 0; i < userPreferenceMatches.length; i++) {
-        $("ul#parkMatchesList").append( "<li class='park-click' id=" +
-                                        userPreferenceMatches[i].parkId +
-                                        " data-toggle='modal' data-target='#" +
-                                        userPreferenceMatches[i].parkId + "Modal'>" + userPreferenceMatches[i].parkName + "</li>");
-      }
-    }
     // look for perfect matches, exclusiveSearch = "match"
     for (var j = returnedParkLocations.length - 1; j >= 0; j--) {
       if (returnedParkLocations[j].exclusiveSearch === "not") {

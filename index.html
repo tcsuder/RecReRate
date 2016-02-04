@@ -150,42 +150,42 @@
         <ul>
           <li class="park-click" id="arborLodge" data-toggle="modal" data-target="#arborLodgeModal">Arbor Lodge</li>
           <li class="park-click" id="overlook" data-toggle="modal" data-target="#overlookModal">Overlook Park</li>
-          <li class="park-click" id="cathedral">Cathedral Park</li>
-          <li class="park-click" id="kelleyPoint">Kelley Point Park</li>
+          <li class="park-click" id="cathedral" data-toggle="modal" data-target="#cathedralModal">Cathedral Park</li>
+          <li class="park-click" id="kelleyPoint" data-toggle="modal" data-target="#kelleyPointModal">Kelley Point Park</li>
           <li class="park-click" id="peninsula" data-toggle="modal" data-target="#peninsulaModal">Penninsula Park</li>
-          <li class="park-click" id="pier">Pier Park</li>
+          <li class="park-click" id="pier" data-toggle="modal" data-target="#pierModal">Pier Park</li>
         </ul>
         <h3>Northeast Portland</h3>
         <ul>
           <li class="park-click" id="alberta" data-toggle="modal" data-target="#albertaModal">Alberta Park</li>
           <li class="park-click" id="buckmanField" data-toggle="modal" data-target="#buckmanFieldModal">Buckman Field Park</li>
-          <li class="park-click" id="glenhaven">Glenhaven Park</li>
+          <li class="park-click" id="glenhaven" data-toggle="modal" data-target="#glenhavenModal">Glenhaven Park</li>
           <li class="park-click" id="grant" data-toggle="modal" data-target="#grantModal">Grant Park</li>
-          <li class="park-click" id="rockyButte">Rocky Butte Natural Area</li>
+          <li class="park-click" id="rockyButte" data-toggle="modal" data-target="#rockyButteModal">Rocky Butte Natural Area</li>
         </ul>
         <h3>Southeast Portland</h3>
         <ul>
           <li class="park-click" id="laurelhurst" data-toggle="modal" data-target="#laurelhurstModal">Laurelhurst Park</li>
           <li class="park-click" id="tabor" data-toggle="modal" data-target="#taborModal">Mt. Tabor</li>
-          <li class="park-click" id="oaksBottom">Oaks Bottom Wildlife Refuge</li>
-          <li class="park-click" id="powellButte">Powell Butte</li>
-          <li class="park-click" id="sellwoodRiver">Sellwood Riverfront Park</li>
-          <li class="park-click" id="springWater">Spring Water Corridor</li>
-          <li class="park-click" id="woodstock">Woodstock Park</li>
+          <li class="park-click" id="oaksBottom" data-toggle="modal" data-target="#oaksBottomModal">Oaks Bottom Wildlife Refuge</li>
+          <li class="park-click" id="powellButte" data-toggle="modal" data-target="#powellButteModal">Powell Butte</li>
+          <li class="park-click" id="sellwoodRiver" data-toggle="modal" data-target="#sellwoodRiverModal">Sellwood Riverfront Park</li>
+          <li class="park-click" id="springWater" data-toggle="modal" data-target="#springWaterModal">Spring Water Corridor</li>
+          <li class="park-click" id="woodstock" data-toggle="modal" data-target="#woodstockModal">Woodstock Park</li>
         </ul>
         <h3>Southwest Portland</h3>
         <ul>
           <li class="park-click" id="gabriel" data-toggle="modal" data-target="#gabrielModal">Gabriel Park</li>
           <li class="park-click" id="tryon" data-toggle="modal" data-target="#tryonModal">Tryon Creek State Park</li>
-          <li class="park-click" id="washington">Washington Park</li>
-          <li class="park-click" id="waterfront">Waterfront Park</li>
+          <li class="park-click" id="washington" data-toggle="modal" data-target="#washingtonModal">Washington Park</li>
+          <li class="park-click" id="waterfront" data-toggle="modal" data-target="#waterfrontModal">Waterfront Park</li>
         </ul>
         <h3>Northwest Portland</h3>
         <ul>
           <li class="park-click" id="forest" data-toggle="modal" data-target="#forestModal">Forest Park</li>
           <li class="park-click" id="jamison" data-toggle="modal" data-target="#jamisonModal">Jamison Square</li>
-          <li class="park-click" id="pittock">Pittock Mansion</li>
-          <li class="park-click" id="wallace">Wallace Park</li>
+          <li class="park-click" id="pittock" data-toggle="modal" data-target="#pittockModal">Pittock Mansion</li>
+          <li class="park-click" id="wallace" data-toggle="modal" data-target="#wallaceModal">Wallace Park</li>
         </ul>
       </div>
     </div>
@@ -293,6 +293,107 @@
         </div>
       </div>
 
+      <div id="cathedralModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title">Cathedral Park</h3>
+            </div>
+            <div class="modal-body">
+              <img class="modalImg" src="img/cathedral.jpg" alt="" />
+              <h4>Address: N Edison St &amp; Pittsburg Ave, Portland, OR 97203</h4>
+              <h4>Amenities: boat dock, boat ramp, canoe launch, dog off-leash area, paths, all-access restrooms, picnic tables, Plaza, riverfront views, and outdoor stage.</h4>
+              <h4>Hours: 5:00am-midnight</h4>
+              <hr>
+
+              <h4>About This Park:</h4>
+              <p>Nestled underneath the St Johns bridge this is one of the more historically significant parks in Portland. This location has been a fishing camp for the indigenous tribes of the region for centuries, as well as hosting the Lewis &amp; Clark expedition on April 2, 1806. James John, the founder of St Johns, settled and operated a ferry across the Willamette to the neighboring Linnton. It wasn't until 1970s that funds were raised to clean up the area and construct the gorgeous park. Bring a picnic and stay tuned for events on the outdoor stage throughout the summer.</p>
+              <hr>
+              <h4>Review:</h4>
+              <div class="newReview">
+                <form class="form-horizontal" id="cathedral">
+                  <input id="cathedralReviewName" type="text" class="form-control" placeholder="Name"><br>
+                  <select id="cathedralReviewRating" class="form-control"><br>
+                    <option>Excellent</option>
+                    <option>Very Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                    <option>Terrible</option>
+                  </select><br>
+                  <textarea id="cathedralReviewComment" class="form-control" placeholder="Review this park" rows="3"></textarea>
+                   <br><button type="submit" class="btn btn-default">Submit</button>
+                </form>
+              </div>
+              <hr>
+              <div class="realUserReview">
+
+              </div>
+              <div class="fakeReview">
+                <p><strong>Antonio 'the-van-man' Gaudi</strong></p>
+                <p>Rating: Excellent</p>
+                <p>Chances are if you've bought a van in Portland you've been wooed by the shot of it under this bridge. The vaulting grey buttresses make a nice contrast with the greenery of the surrounding park. I love this park for its simplicity and proximity to the tasty foods in St Johns, but you could always pack a lunch!</p>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="kelleyPointModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title">Kelley Point Park</h3>
+            </div>
+            <div class="modal-body">
+              <img class="modalImg" src="img/kelleyPoint.jpg" alt="" />
+              <h4>Address: N Marine Dr &amp; Lombard St</h4>
+              <h4>Amenities: swimming, dog-walking, canoe launch, historical site, paths, picnic sites, riverfront views, hiking trails, vistas.</h4>
+              <h4>Hours: 6:00am-9:00pm</h4>
+              <hr>
+
+              <h4>About This Park:</h4>
+              <p> Kelley Point Park is one of the most popular 'summer day' destinations for Portland. The large stands of swaying cottonwood trees, the proximity to the mightly Columbia, and the plentiful walking paths firmly cement Kelley Point as a perennial favorite. The area is named after Hall Jackson Kelley, a mildly deranged New Englander who spent his life as a vocal advocate for settlement in the Pacific Northwest, and trying to seek payment for his proselytizing. Kelley believed there should be a great city at the confluence of the Columbia and Willamette. Today there is a plaque commemorating his idealism, but little else remains of his ambition. </p>
+              <hr>
+              <h4>Review:</h4>
+              <div class="newReview">
+                <form class="form-horizontal" id="kelleyPoint">
+                  <input id="kelleyPointReviewName" type="text" class="form-control" placeholder="Name"><br>
+                  <select id="kelleyPointReviewRating" class="form-control"><br>
+                    <option>Excellent</option>
+                    <option>Very Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                    <option>Terrible</option>
+                  </select><br>
+                  <textarea id="kelleyPointReviewComment" class="form-control" placeholder="Review this park" rows="3"></textarea>
+                   <br><button type="submit" class="btn btn-default">Submit</button>
+                </form>
+              </div>
+              <hr>
+              <div class="realUserReview">
+
+              </div>
+              <div class="fakeReview">
+                <p><strong>Buxflap's Legal Guardian</strong></p>
+                <p>Rating: Excellent</p>
+                <p> Kinda weird to think this pretty spot is actually just a bunch of river dredgings.. but whatever. I take my dog, Buxflap, here all the time, he loves poking around in the shallows for minnows and flying in between the trees. The weekend makes kelley point a bit more of a 'party place' so if you're not into that, try earlier in the day or during the week.</p>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div id="peninsulaModal" class="modal fade">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -330,9 +431,59 @@
 
               </div>
               <div class="fakeReview">
-                <p><strong>Jane Doe</strong></p>
+                <p><strong>~~stoptosmellthefl0wers~~</strong></p>
                 <p>Rating: Excellent</p>
                 <p>This park is very beautiful, so many pretty different colored roses. The grounds are well kept. A nice stroll through this park on a summer morning is a great way to start your day. Great waterfall in the middle of the park for pictures or just to sit and relax.</p>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="pierModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title">Pier Park</h3>
+            </div>
+            <div class="modal-body">
+              <img class="modalImg" src="img/pier.jpg" alt="" />
+              <h4>Address: N Lombard St &amp; Bruce Ave</h4>
+              <h4>Amenities:  accessible play area, accessible restroom, baseball field, basketball court, disc golf, paths, picnic tables, playground, skatepark, soccer field, softball field, splash pad, and tennis court.</h4>
+              <h4>Hours: 5:00am-midnight</h4>
+              <hr>
+
+              <h4>About This Park:</h4>
+              <p>Pier Park, at a sprawling 87 acres and facilities for many different sports, is a gem of North Portland. One of the cities best skateparks is located here, along with one of the only disc golf courses in the Portland area. The whimsical picnic shelter and stands of Doug-fir present a good challenge for those new to disc golf, but the seasoned veterans may just enjoy the scenery. </p>
+              <hr>
+              <h4>Review:</h4>
+              <div class="newReview">
+                <form class="form-horizontal" id="pier">
+                  <input id="pierReviewName" type="text" class="form-control" placeholder="Name"><br>
+                  <select id="pierReviewRating" class="form-control"><br>
+                    <option>Excellent</option>
+                    <option>Very Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                    <option>Terrible</option>
+                  </select><br>
+                  <textarea id="pierReviewComment" class="form-control" placeholder="Review this park" rows="3"></textarea>
+                   <br><button type="submit" class="btn btn-default">Submit</button>
+                </form>
+              </div>
+              <hr>
+              <div class="realUserReview">
+
+              </div>
+              <div class="fakeReview">
+                <p><strong>Frolf You</strong></p>
+                <p>Rating: Average</p>
+                <p>Bro let me tell you I have frolfed the world over, and there's just something about these big doug-firs that really get me going. By the way, it's pronounced 'frolfing' not 'gorisbee', common mistake bros but there you go. See you out on the links, remember, no beer in the park!!</p>
               </div>
 
             </div>
@@ -405,7 +556,7 @@
               <hr>
 
               <h4>About This Park:</h4>
-              <p>This park features some of Portland's finest publicly maintained soccer pitches and baseball fields. The Buckman Field House was built in 1925, this piece of history contrasts nicely with more modern updates. A $2.3 renovation in 2011 created an all-weather synthetic field with stadium lighting. This park is the home of the Portland City United, the metro's classic soccer club. The sand pit and smaller playground are perfect for entertaining soon-to-be soccer stars.</p>
+              <p>This park features some of Portland's finest publicly maintained soccer pitches and baseball fields. The Buckman Field House was built in 1925, this piece of history contrasts nicely with more modern updates. A $2.3m renovation in 2011 created an all-weather synthetic field with stadium lighting. This park is the home of the Portland City United, the metro's classic soccer club. The sand pit and smaller playground are perfect for entertaining soon-to-be soccer stars.</p>
               <hr>
               <h4>Review:</h4>
               <form class="form-horizontal" id="buckmanField">
@@ -428,6 +579,54 @@
                 <p><strong>Jane Doe</strong></p>
                 <p>Rating: Excellent</p>
                 <p>Buckman Field Park is THE place to play, if you can grab a spot. I love the track around the field too, very useful for interval training. Of course.. after training, I just HAD to grab some Voodoo Donuts, right across the street!</p>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="glenhavenModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title">Glenhaven Park</h3>
+            </div>
+            <div class="modal-body">
+              <img class="modalImg" src="img/glenhaven.jpg" alt="" />
+              <h4>Address: NE 82nd Ave &amp; Siskiyou St</h4>
+              <h4>Amenities: dog-walking, dog-run, skatepark, softabll field, tennis court, accessible restrooms.</h4>
+              <h4>Hours: 5:00AM-midnight</h4>
+              <hr>
+
+              <h4>About This Park:</h4>
+              <p>This park has one of the most advanced dog parks in the city. There are rules and stipulations but all serve in one aspect or another to properly socialize, ensure safety, and overall create enjoyable experiences for both owners and their canine companions. Your dog must be up to date on their shots and have passed a behavioral evaluation. The skatepark features a small bowl, and many other interesting features. </p>
+              <hr>
+              <h4>Review:</h4>
+              <form class="form-horizontal" id="glenhaven">
+                <input id="glenhavenReviewName" type="text" class="form-control" placeholder="Name"><br>
+                <select id="glenhavenReviewRating" class="form-control"><br>
+                  <option>Excellent</option>
+                  <option>Very Good</option>
+                  <option>Average</option>
+                  <option>Poor</option>
+                  <option>Terrible</option>
+                </select><br>
+                <textarea id="glenhavenReviewComment" class="form-control" placeholder="Review this park" rows="3"></textarea>
+                <br><button type="submit" class="btn btn-default">Submit</button>
+              </form>
+              <hr>
+              <div class="realUserReview">
+
+              </div>
+              <div class="fakeReview">
+                <p><strong>Doggy Dane</strong></p>
+                <p>Rating: Excellent</p>
+                <p>WOW my dog loved this park. After it got its 'badge' we go all the time. No unfriendly doggies biting at my pup! I can't recommend this regulated dog park enough.</p>
               </div>
 
             </div>
