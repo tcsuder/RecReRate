@@ -15,6 +15,7 @@ var jamison = new Park("Jamison Square", "jamison", "northWest");
 arborLodge.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "horseshoePit", "dogArea", "paths", "playground", "soccerField"];
 arborLodge.activities = ["tennis", "baseball", "kickball", "horseshoe", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
 
+
 overlook.amenities = ["picnic", "restroom", "baseballField", "basketballCourt", "dogArea", "paths", "playground", "soccerField"];
 overlook.activities = ["baseball", "kickball", "basketball", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"]
 
@@ -98,8 +99,8 @@ function Review(name, rating, comment) {
 
 Review.prototype.fullReview = function () {
   return "<p><strong>" + this.name + "</strong></p>" +
-    "<p>Rating:" + this.rating + "</p>" +
-    "<p>" + this.comment + "</p>";
+    "<p>Rating: " + this.rating + "</p>" +
+    "<p>" + this.comment + "</p><hr>";
 }
 
 
@@ -185,10 +186,30 @@ $(document).ready(function() {
     var userRating = $("select#reviewRating").val();
     var userComment = $("textarea#reviewComment").val();
     var userReview = new Review (userName, userRating, userComment);
+console.log((this.id));
+console.log(allParks);
+var reviewId = this.id;
+var foundPark;
+for (var i= 0; i < allParks.length; i++) {
+console.log(reviewId);
 
-    $("input#reviewName").val("");
-    $("select#reviewRating").val("Excellent");
-    $("textarea#reviewComment").val("");
+  if (allParks[i].parkId === reviewId) {
+    foundPark = allParks[i];
+  }
+  // return foundPark;
+
+
+};
+  foundPark.review.push(userReview);
+  console.log(foundPark.review)
+  console.log(userReview.fullReview())
+
+    $("#" + reviewId + "Modal .realUserReview").prepend(userReview.fullReview());
+    // $("#arborLodgeModal .realUserReview").prepend(userReview.fullReview());
+
+    // $("input#reviewName").val("");
+    // $("select#reviewRating").val("Excellent");
+    // $("textarea#reviewComment").val("");
 
   });
 
