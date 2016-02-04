@@ -213,8 +213,6 @@ $(document).ready(function() {
   $("form.form-horizontal").submit(function(event) {
     event.preventDefault();
 
-
-
     var reviewId = this.id;
     var foundPark;
     for (var i= 0; i < allParks.length; i++) {
