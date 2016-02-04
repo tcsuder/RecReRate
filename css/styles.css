@@ -2,8 +2,9 @@
 #header{
   margin-bottom: 0;
   font-family: 'Cabin Sketch', cursive;
-  background-color: #94BD65;
+  background-color: #2F3B1B;
   padding-bottom: 1em;
+  color:white;
 }
 
 
@@ -13,7 +14,7 @@
   padding-bottom: 9em;
   padding-left: 15%;
   padding-right: 15%;*/
-  /*border: 5px solid black;*/
+  border: 5px solid black;
   margin-top: 10em;
   margin-bottom: 10em;
 }
@@ -47,12 +48,28 @@ body img {
 }
 
 #browse-button {
-  background-color:
+  background-color: #969150;
+  color: white;
+}
+
+#browse-button:hover {
+  background-color: #B0AA5E;
+}
+
+#search-button {
+  background-color: #4A5C2A;
+  color: white;
+}
+
+#search-button:hover {
+  background-color: #5A7033;
 }
 
 /* ===================================SEARCH PAGE*/
 #search button{
   margin-top: 2em;
+  background-color: #4A5C2A;
+  color: white;
 }
 
 .search-form {
