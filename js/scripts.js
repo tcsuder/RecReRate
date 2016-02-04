@@ -7,7 +7,7 @@ var grant = new Park("Grant Park", "grant", "northEast");
 var laurelhurst = new Park("Laurelhurst Park", "laurelhurst", "southEast");
 var tabor = new Park("Mt. Tabor Park", "tabor", "southEast");
 var gabriel = new Park("Gabriel Park", "gabriel", "southWest");
-var tryon = new Park("Tryon Creek State Park", "southWest");
+var tryon = new Park("Tryon Creek State Park", "tryon", "southWest");
 var forest = new Park("Forest Park", "forest", "northWest");
 var jamison = new Park("Jamison Square", "jamison", "northWest");
 
@@ -165,8 +165,18 @@ $(document).ready(function() {
 
 
     if (amenitiesAndActivities.length === 0) {
-      for (var i = 0; i < returnedParkLocations.length; i++) {
-        $("ul#parkMatchesList").append("<li class='park-click' id=" + returnedParkLocations[i].parkId + " data-toggle='modal' data-target='#" + returnedParkLocations[i].parkId + "Modal'>" + returnedParkLocations[i].parkName + "</li>");
+      if (returnedParkLocations.length > 15) {
+        var rplFirstHalf = Math.ceil(returnedParkLocations.length / 2);
+        for (var i = 0; i < rplFirstHalf; i++) {
+          $("ul#parkMatchesList1").append("<li class='park-click' id=" + returnedParkLocations[i].parkId + " data-toggle='modal' data-target='#" + returnedParkLocations[i].parkId + "Modal'>" + returnedParkLocations[i].parkName + "</li>");
+        }
+        for (var i = rplFirstHalf; i < returnedParkLocations.length; i++) {
+          $("ul#parkMatchesList2").append("<li class='park-click' id=" + returnedParkLocations[i].parkId + " data-toggle='modal' data-target='#" + returnedParkLocations[i].parkId + "Modal'>" + returnedParkLocations[i].parkName + "</li>");
+        }
+      } else {
+        for (var i = 0; i < returnedParkLocations.length; i++) {
+          $("ul#parkMatchesList1").append("<li class='park-click' id=" + returnedParkLocations[i].parkId + " data-toggle='modal' data-target='#" + returnedParkLocations[i].parkId + "Modal'>" + returnedParkLocations[i].parkName + "</li>");
+        }
       }
     } else if (returnedParkLocations.length === 0) {
       returnedParkLocations = allParks;
