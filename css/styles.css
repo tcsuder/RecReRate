@@ -1,7 +1,9 @@
  /*===============================HEADER*/
-.jumbotron {
+#header{
   margin-bottom: 0;
   font-family: 'Cabin Sketch', cursive;
+  background-color: #94BD65;
+  padding-bottom: 1em;
 }
 
 
@@ -14,11 +16,10 @@
   /*border: 5px solid black;*/
   margin-top: 10em;
   margin-bottom: 10em;
-  /*background-image: url(../img/background1.jpg);*/
 }
 
 body {
-  background-image: url(../img/background1-min.jpg);
+  background-image: url(../img/background4.jpg);
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -27,6 +28,12 @@ body {
   padding: 10%;
   background-color: white;
   opacity: .8;
+}
+
+body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* =======================================NAV BAR AND FRONT PAGE BUTTONS*/
@@ -39,6 +46,9 @@ body {
   display: none;
 }
 
+#browse-button {
+  background-color:
+}
 
 /* ===================================SEARCH PAGE*/
 #search button{
