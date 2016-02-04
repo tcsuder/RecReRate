@@ -13,7 +13,7 @@ var laurelhurst = new Park("Laurelhurst Park", "laurelhurst", "southEast");
 var tabor = new Park("Mt. Tabor Park", "tabor", "southEast");
 var oaksBottom = new Park ("Oaks Bottom Wildlife Refuge", "oaksBottom", "southEast");
 var powellButte = new Park ("Powell Butte", "powellButte", "southEast");
-var sellwood = new Park ("Sellwood Riverfront Park", "sellwood", "southEast");
+var sellwoodRiver = new Park ("Sellwood Riverfront Park", "sellwood", "southEast");
 var springWater = new Park ("Spring Water Corridor", "springWater", "southEast");
 var woodstock = new Park ("Woodstock Park", "woodstock", "southEast");
 var gabriel = new Park("Gabriel Park", "gabriel", "southWest");
@@ -74,8 +74,8 @@ oaksBottom.activities = ["wildlife", "hikingTrails", "pavedPaths"];
 powellButte.amenities = ["restroom", "naturalArea", "paths"];
 powellButte.activities = ["wildlife", "hikingTrails", "pavedPaths"];
 
-sellwood.amenities = ["picnic", "restroom", "waterAccess", "dogArea", "paths"];
-sellwood.activities = ["kayaking", "boatLaunch", "dogOffLeash", "hikingTrails", "pavedPaths", "frisbee"];
+sellwoodRiver.amenities = ["picnic", "restroom", "waterAccess", "dogArea", "paths"];
+sellwoodRiver.activities = ["kayaking", "boatLaunch", "dogOffLeash", "hikingTrails", "pavedPaths", "frisbee"];
 
 springWater.amenities = ["picnic", "restroom", "naturalArea", "paths"];
 springWater.activities = ["wildlife", "hikingTrails", "pavedPaths"];
@@ -109,7 +109,7 @@ wallace.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "bask
 wallace.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
 
 
-var allParks = [arborLodge, overlook, peninsula, alberta, buckmanField, grant, laurelhurst, tabor, gabriel, tryon, forest, jamison];
+var allParks = [arborLodge, overlook, cathedral, kelleyPoint, pier, peninsula, alberta, buckmanField, glenhaven, rockyButte, grant, laurelhurst, tabor, oaksBottom, powellButte, sellwoodRiver, springWater, woodstock, gabriel, tryon, washington, waterfront, forest, jamison, pittock, wallace];
 
 function Park(parkName, parkId, parkLocation) {
   this.parkName = parkName;
