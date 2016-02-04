@@ -1,15 +1,29 @@
 var arborLodge = new Park("Arbor Lodge", "arborLodge", "north");
 var overlook = new Park("Overlook Park", "overlook", "north");
+var cathedral = new Park ("Cathedral Park", "cathedral", "north");
+var kelleyPoint = new Park ("Kelley Point Park", "kelleyPoint", "north");
+var pier = new Park ("Pier Park", "pier", "north");
 var peninsula = new Park("Peninsula Park", "peninsula", "north");
 var alberta = new Park("Alberta Park", "alberta", "northEast");
 var buckmanField = new Park("Buckman Field Park", "buckmanField", "northEast");
+var glenhaven = new Park ("Glenhaven Park", "glenhaven", "northEast");
+var rockyButte = new Park ("Rocky Butte Natural Area", "rockyButte", "northEast");
 var grant = new Park("Grant Park", "grant", "northEast");
 var laurelhurst = new Park("Laurelhurst Park", "laurelhurst", "southEast");
 var tabor = new Park("Mt. Tabor Park", "tabor", "southEast");
+var oaksBottom = new Park ("Oaks Bottom Wildlife Refuge", "oaksBottom", "southEast");
+var powellButte = new Park ("Powell Butte", "powellButte", "southEast");
+var sellwood = new Park ("Sellwood Riverfront Park", "sellwood", "southEast");
+var springWater = new Park ("Spring Water Corridor", "springWater", "southEast");
+var woodstock = new Park ("Woodstock Park", "woodstock", "southEast");
 var gabriel = new Park("Gabriel Park", "gabriel", "southWest");
 var tryon = new Park("Tryon Creek State Park", "tryon", "southWest");
+var washington = new Park ("Washington Park", "washington", "southWest");
+var waterfront = new Park ("waterfront Park", "waterfront", "southWest");
 var forest = new Park("Forest Park", "forest", "northWest");
 var jamison = new Park("Jamison Square", "jamison", "northWest");
+var pittock = new Park ("Pittock Mansion", "pittock", "northWest");
+var wallace = new Park ("Wallace Park", "wallace", "northWest");
 
 // NORTH
 arborLodge.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "horseshoePit", "dogArea", "paths", "playground", "soccerField"];
