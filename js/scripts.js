@@ -64,8 +64,15 @@ function Park(parkName, parkId, parkLocation) {
   this.exclusiveSearch = "match";
 }
 
+function preferenceMatch(parkId) {
+  this.parkId = parkId;
+  this.activityMatchIndices;
+  this.amenityMatchIndices;
+}
+
 var returnedParkLocations = [];
 var userPreferenceMatches = [];
+var preferenceMatchIndices = [];
 
 var parkCompiler = function(location) {
   for (var i = 0; i < allParks.length; i++) {
@@ -77,18 +84,31 @@ var parkCompiler = function(location) {
 }
 
 var preferenceFinder = function(amenitiesAndActivities) {
+  debugger;
   for (var i = returnedParkLocations.length - 1; i >= 0; i--) {
+    parkMatch = new preferenceMatch(returnedParkLocations[i].parkId)
     if (returnedParkLocations[i].amenities.indexOf(amenitiesAndActivities) === -1) {
       if (returnedParkLocations[i].activities.indexOf(amenitiesAndActivities) === -1) {
         returnedParkLocations[i].exclusiveSearch = "not";
       } else if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
         userPreferenceMatches.push(returnedParkLocations[i]);
+        parkMatch.activityMatchIndices = returnedParkLocations[i].activities.indexOf(amenitiesAndActivities);
         }
       } else if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
       userPreferenceMatches.push(returnedParkLocations[i]);
+      parkMatch.amenityMatchIndices = returnedParkLocations[i].amenities.indexOf(amenitiesAndActivities);
       }
+      preferenceMatchIndices.push(parkMatch);
+      console.log(parkMatch);
     }
   return userPreferenceMatches;
+}
+
+var fullSearchResult = function(park) {
+  return  "<li class='park-click' id=" + park.parkId +
+          " data-toggle='modal' data-target='#" +
+          park.parkId + "Modal'>" + park.parkName + "</li>" +
+          "<ul id = 'preferenceMatch'></ul>"
 }
 
 function Review(name, rating, comment) {
@@ -144,10 +164,17 @@ $(document).ready(function() {
 
   $("form.search-form").submit(function(event) {
     event.preventDefault();
-    $("ul#parkMatchesList").empty();
+    $("ul#parkMatchesList1").empty();
+    $("ul#parkMatchesList2").empty();
+
+    // reset exclusive search function
+    allParks.forEach(function(park) {
+      park.exclusiveSearch = "match";
+    });
 
     returnedParkLocations = [];
     userPreferenceMatches = [];
+    preferenceMatchIndices = [];
     var amenitiesAndActivities = [];
     var locations = [];
 
@@ -164,43 +191,64 @@ $(document).ready(function() {
       amenitiesAndActivities.push($(this).val());
     });
 
-
+    // no amenities or activities selected
     if (amenitiesAndActivities.length === 0) {
-      if (returnedParkLocations.length > 15) {
+      if (returnedParkLocations.length > 10) {
         var rplFirstHalf = Math.ceil(returnedParkLocations.length / 2);
         for (var i = 0; i < rplFirstHalf; i++) {
-          $("ul#parkMatchesList1").append("<li class='park-click' id=" + returnedParkLocations[i].parkId + " data-toggle='modal' data-target='#" + returnedParkLocations[i].parkId + "Modal'>" + returnedParkLocations[i].parkName + "</li>");
+          $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
         }
         for (var i = rplFirstHalf; i < returnedParkLocations.length; i++) {
-          $("ul#parkMatchesList2").append("<li class='park-click' id=" + returnedParkLocations[i].parkId + " data-toggle='modal' data-target='#" + returnedParkLocations[i].parkId + "Modal'>" + returnedParkLocations[i].parkName + "</li>");
+          $("ul#parkMatchesList2").append(fullSearchResult(returnedParkLocations[i]));
         }
       } else {
         for (var i = 0; i < returnedParkLocations.length; i++) {
-          $("ul#parkMatchesList1").append("<li class='park-click' id=" + returnedParkLocations[i].parkId + " data-toggle='modal' data-target='#" + returnedParkLocations[i].parkId + "Modal'>" + returnedParkLocations[i].parkName + "</li>");
+
+          $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
+        }
+      } // no location selected
+    } else if (returnedParkLocations.length === 0) {
+      allParks.forEach(function(park) {
+        returnedParkLocations.push(park);
+      });
+      for (var i = 0; i < amenitiesAndActivities.length; i++) {
+        preferenceFinder(amenitiesAndActivities[i]);
+      }
+      if (userPreferenceMatches.length > 10) {
+        var upmFirstHalf = Math.ceil(userPreferenceMatches.length / 2);
+        for (var i = 0; i < upmFirstHalf; i++) {
+          $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
+        }
+        for (var i = upmFirstHalf; i < userPreferenceMatches.length; i++) {
+          $("ul#parkMatchesList2").append(fullSearchResult(returnedParkLocations[i]));
+        }
+      } else {
+        for (var i = 0; i < userPreferenceMatches.length; i++) {
+          $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
         }
       }
-    } else if (returnedParkLocations.length === 0) {
-      returnedParkLocations = allParks;
-      for (var i = 0; i < amenitiesAndActivities.length; i++) {
-        preferenceFinder(amenitiesAndActivities[i]);
+      for (var i = 0; i <= userPreferenceMatches.length; i++) {
+
       }
-      for (var i = 0; i < userPreferenceMatches.length; i++) {
-        $("ul#parkMatchesList").append( "<li class='park-click' id=" +
-                                        userPreferenceMatches[i].parkId +
-                                        " data-toggle='modal' data-target='#" +
-                                        userPreferenceMatches[i].parkId + "Modal'>" + userPreferenceMatches[i].parkName + "</li>");
-      }
+       // both locations and amenities or activities selected
     } else {
-      for (var i = 0; i < amenitiesAndActivities.length; i++) {
-        preferenceFinder(amenitiesAndActivities[i]);
+        for (var i = 0; i < amenitiesAndActivities.length; i++) {
+          preferenceFinder(amenitiesAndActivities[i]);
+        }
+        if (userPreferenceMatches.length > 10) {
+          var upmFirstHalf = Math.ceil(userPreferenceMatches.length / 2);
+          for (var i = 0; i < upmFirstHalf; i++) {
+            $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
+          }
+          for (var i = upmFirstHalf; i < userPreferenceMatches.length; i++) {
+            $("ul#parkMatchesList2").append(fullSearchResult(returnedParkLocations[i]));
+          }
+        } else {
+          for (var i = 0; i < userPreferenceMatches.length; i++) {
+            $("ul#parkMatchesList1").append(fullSearchResult(returnedParkLocations[i]));
+          }
+        }
       }
-      for (var i = 0; i < userPreferenceMatches.length; i++) {
-        $("ul#parkMatchesList").append( "<li class='park-click' id=" +
-                                        userPreferenceMatches[i].parkId +
-                                        " data-toggle='modal' data-target='#" +
-                                        userPreferenceMatches[i].parkId + "Modal'>" + userPreferenceMatches[i].parkName + "</li>");
-      }
-    }
     // look for perfect matches, exclusiveSearch = "match"
     for (var j = returnedParkLocations.length - 1; j >= 0; j--) {
       if (returnedParkLocations[j].exclusiveSearch === "not") {
