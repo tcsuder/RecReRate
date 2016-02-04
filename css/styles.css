@@ -1,7 +1,9 @@
  /*===============================HEADER*/
 .jumbotron {
   margin-bottom: 0;
+  font-family: 'Cabin Sketch', cursive;
 }
+
 
 /* ===============================HOMEPAGE*/
 #homePage {
@@ -17,6 +19,7 @@
 
 body {
   background-image: url(../img/background1-min.jpg);
+  font-family: 'Open Sans', sans-serif;
 }
 
 #homePageButtons {
@@ -90,14 +93,6 @@ body {
 }
 
 /* ===================================MODALS*/
-
-#arborLodgeModal {
-  background-color: lightblue;
-}
-
-#albertaModal {
-  background-color: lightblue;
-}
 
 
 .modalImg {
