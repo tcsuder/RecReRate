@@ -1,15 +1,29 @@
 var arborLodge = new Park("Arbor Lodge", "arborLodge", "north");
 var overlook = new Park("Overlook Park", "overlook", "north");
+var cathedral = new Park ("Cathedral Park", "cathedral", "north");
+var kelleyPoint = new Park ("Kelley Point Park", "kelleyPoint", "north");
+var pier = new Park ("Pier Park", "pier", "north");
 var peninsula = new Park("Peninsula Park", "peninsula", "north");
 var alberta = new Park("Alberta Park", "alberta", "northEast");
 var buckmanField = new Park("Buckman Field Park", "buckmanField", "northEast");
+var glenhaven = new Park ("Glenhaven Park", "glenhaven", "northEast");
+var rockyButte = new Park ("Rocky Butte Natural Area", "rockyButte", "northEast");
 var grant = new Park("Grant Park", "grant", "northEast");
 var laurelhurst = new Park("Laurelhurst Park", "laurelhurst", "southEast");
 var tabor = new Park("Mt. Tabor Park", "tabor", "southEast");
+var oaksBottom = new Park ("Oaks Bottom Wildlife Refuge", "oaksBottom", "southEast");
+var powellButte = new Park ("Powell Butte", "powellButte", "southEast");
+var sellwood = new Park ("Sellwood Riverfront Park", "sellwood", "southEast");
+var springWater = new Park ("Spring Water Corridor", "springWater", "southEast");
+var woodstock = new Park ("Woodstock Park", "woodstock", "southEast");
 var gabriel = new Park("Gabriel Park", "gabriel", "southWest");
 var tryon = new Park("Tryon Creek State Park", "tryon", "southWest");
+var washington = new Park ("Washington Park", "washington", "southWest");
+var waterfront = new Park ("waterfront Park", "waterfront", "southWest");
 var forest = new Park("Forest Park", "forest", "northWest");
 var jamison = new Park("Jamison Square", "jamison", "northWest");
+var pittock = new Park ("Pittock Mansion", "pittock", "northWest");
+var wallace = new Park ("Wallace Park", "wallace", "northWest");
 
 // NORTH
 arborLodge.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "horseshoePit", "dogArea", "paths", "playground", "soccerField"];
@@ -17,7 +31,16 @@ arborLodge.activities = ["tennis", "baseball", "kickball", "horseshoe", "dogOffL
 
 
 overlook.amenities = ["picnic", "restroom", "baseballField", "basketballCourt", "dogArea", "paths", "playground", "soccerField"];
-overlook.activities = ["baseball", "kickball", "basketball", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"]
+overlook.activities = ["baseball", "kickball", "basketball", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
+
+cathedral.amenities = ["picnic", "restroom", "waterAccess", "dogArea", "naturalArea", "paths"];
+cathedral.activities = ["riverSwimming", "kayaking", "boatLaunch", "dogOffLeash", "wildlife", "pavedPaths"];
+
+kelleyPoint.amenities = ["picnic", "restroom", "waterAccess", "dogArea", "naturalArea", "paths"];
+kelleyPoint.activities = ["riverSwimming", "kayaking", "dogOffLeash", "wildlife", "hikingTrails", "pavedPaths"];
+
+pier.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "fountain", "paths", "playground", "skatepark", "soccerField", "pool"];
+pier.activities = ["tennis", "baseball", "kickball", "basketball", "pavedPaths", "skateboarding", "soccer", "frisbee", "ballSports", "poolSwimming"];
 
 peninsula.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "horseshoePit", "fountain", "paths", "playground", "soccerField", "pool"];
 peninsula.activities = ["tennis", "baseball", "kickball", "basketball", "horseshoe", "pavedPaths", "soccer", "frisbee", "ballSports", "poolSwimming"];
@@ -29,14 +52,36 @@ alberta.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLea
 buckmanField.amenities = ["picnic", "baseballField", "playground", "soccerField"];
 buckmanField.activities = ["baseball", "kickball", "soccer", "frisbee", "ballSports"];
 
+glenhaven.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "paths", "playground", "skatepark", "soccerField"];
+glenhaven.activities = ["tennis", "baseball", "kickball", "pavedPaths", "skateboarding", "soccer", "frisbee", "ballSports"];
+
+rockyButte.amenities = ["naturalArea", "paths"];
+rockyButte.activities = ["wildlife", "hikingTrails", "pavedPaths"];
+
 grant.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "fountain", "paths", "playground", "soccerField", "pool"];
 grant.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLeash",  "pavedPaths", "soccer", "frisbee", "ballSports", "poolSwimming"];
+
 // SOUTHEAST
 laurelhurst.amenities = ["picnic", "restroom", "tennisCourt", "basketballCourt", "horseshoePit", "dogArea", "paths", "playground", "soccerField"];
 laurelhurst.activities = ["tennis", "basketball", "horseshoe", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
 
 tabor.amenities = ["picnic", "restroom", "tennisCourt", "basketballCourt", "horseshoePit", "dogArea", "naturalArea", "paths", "playground"];
 tabor.activities = ["tennis", "basketball", "horseshoe", "dogOffLeash", "wildlife", "hikingTrails", "pavedPaths", "frisbee"];
+
+oaksBottom.amenities = ["naturalArea", "paths"];
+oaksBottom.activities = ["wildlife", "hikingTrails", "pavedPaths"];
+
+powellButte.amenities = ["restroom", "naturalArea", "paths"];
+powellButte.activities = ["wildlife", "hikingTrails", "pavedPaths"];
+
+sellwood.amenities = ["picnic", "restroom", "waterAccess", "dogArea", "paths"];
+sellwood.activities = ["kayaking", "boatLaunch", "dogOffLeash", "hikingTrails", "pavedPaths", "frisbee"];
+
+springWater.amenities = ["picnic", "restroom", "naturalArea", "paths"];
+springWater.activities = ["wildlife", "hikingTrails", "pavedPaths"];
+
+woodstock.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "horseshoePit", "dogArea", "paths", "playground", "soccerField"];
+woodstock.activities = ["tennis", "baseball", "kickball", "basketball", "horseshoe", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
 
 // SOUTHWEST
 gabriel.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "paths", "playground", "skatepark", "soccerField"];
@@ -45,11 +90,23 @@ gabriel.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLea
 tryon.amenities = ["picnic", "restroom", "naturalArea", "paths"];
 tryon.activities = ["wildlife", "hikingTrails", "pavedPaths"];
 
+washington.amenities = ["picnic", "restroom", "tennisCourt", "naturalArea", "paths", "playground", "soccerField"];
+washington.activities = ["tennis", "wildlife", "hikingTrails", "pavedPaths", "soccer", "frisbee", "ballSports"];
+
+waterfront.amenities = ["restroom", "waterAccess", "fountain", "paths"];
+waterfront.activities = ["boatLaunch", "pavedPaths", "frisbee"];
+
 // NORTHWEST
 forest.amenities = ["naturalArea", "paths"];
 forest.activities = ["wildlife", "hikingTrails"];
 
 jamison.amenities = ["restroom", "fountain"];
+
+pittock.amenities = ["picnic", "restroom", "paths", ""];
+pittock.activities = ["hikingTrails", "pavedPaths"];
+
+wallace.amenities = ["picnic", "restroom", "tennisCourt", "baseballField", "basketballCourt", "dogArea", "paths", "playground", "soccerField"];
+wallace.activities = ["tennis", "baseball", "kickball", "basketball", "dogOffLeash", "pavedPaths", "soccer", "frisbee", "ballSports"];
 
 
 var allParks = [arborLodge, overlook, peninsula, alberta, buckmanField, grant, laurelhurst, tabor, gabriel, tryon, forest, jamison];
