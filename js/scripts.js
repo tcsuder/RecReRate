@@ -107,16 +107,36 @@ Review.prototype.fullReview = function () {
 
 $(document).ready(function() {
 
-  // Home Page Clicks
+  // Home Page and Nav Clicks
 
   $("button#search-button").click(function() {
-    $("#search").slideDown();
+    $("#search-and-nav").slideDown();
     $("#homePage").hide();
   });
 
   $("button#browse-button").click(function() {
-    $("#browse").slideDown();
+    $("#browse-and-nav").slideDown();
     $("#homePage").hide();
+  });
+
+  $("a#navbar-search").click(function() {
+    $("#homePage").hide();
+    $("#search").hide();
+    $("#search-and-nav .navbar").hide();
+    $("#search-and-nav").show();
+    $("#browse-and-nav").hide();
+    $("#search-and-nav .navbar").show();
+    $("#search").slideDown();
+  });
+
+  $("a#navbar-browse").click(function() {
+    $("#homePage").hide();
+    $("#browse").hide();
+    $("#browse-and-nav .navbar").hide();
+    $("#browse-and-nav").show();
+    $("#search-and-nav").hide();
+    $("#browse-and-nav .navbar").show();
+    $("#browse").slideDown();
   });
 
   // Search Submit
@@ -176,6 +196,7 @@ $(document).ready(function() {
         returnedParkLocations.splice(j,1);
       }
     }
+    $("#search-results").show();
   });
 
   $("form.form-horizontal").submit(function(event) {
