@@ -146,7 +146,7 @@ var preferenceFinder = function(amenitiesAndActivities) {
         if (returnedParkLocations[i].activities.indexOf(amenitiesAndActivities) === -1) {
           returnedParkLocations[i].exclusiveSearch = "not";
         } else {
-          parkMatch = new preferenceMatch(returnedParkLocations[i].parkId)
+          var parkMatch = new preferenceMatch(returnedParkLocations[i].parkId)
           parkMatch.activityMatchIndices = returnedParkLocations[i].activities.indexOf(amenitiesAndActivities);
           preferenceMatchIndices.push(parkMatch);
           if (userPreferenceMatches.indexOf(returnedParkLocations[i]) === -1) {
