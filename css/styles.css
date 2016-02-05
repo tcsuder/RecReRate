@@ -86,12 +86,16 @@ body img {
   display: none;
 }
 
-#parkMatchesList1 {
+#parkMatchesList1, #parkMatchesList2 {
   padding: 0;
 }
 
 #search-col1 {
   padding:0;
+}
+
+.dropDown {
+  display: none;
 }
 
 /* ===================================BROWSE PAGE*/
