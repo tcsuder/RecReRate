@@ -167,10 +167,10 @@ var preferenceFinder = function(amenitiesAndActivities) {
 
 
 var fullSearchResult = function(park) {
-  return  "<li class='park-click' id=" + park.parkId +
+  return  "<li class='park-click hover' id=" + park.parkId +
           " data-toggle='modal' data-target='#" +
           park.parkId + "Modal'>" + park.parkName + "</li>" +
-          "<ul id = '" + park.parkId + "PreferenceMatch'></ul>"
+          "<ul class='dropDown' id = '" + park.parkId + "PreferenceMatch'></ul>"
 }
 
 function Review(name, rating, comment) {
@@ -402,7 +402,19 @@ $(document).ready(function() {
       }
     }
     $("#search-results").show();
+
+    // hover feature to show amentites and activites in search results ul
+
+    $(".searchResultsUl li").hover(
+        function() {
+          $(this).next().removeClass("dropDown");
+      }, function() {
+        $(this).next().addClass("dropDown");
+      }
+    );
   });
+
+  // reveiw submit function
 
   $("form.form-horizontal").submit(function(event) {
     event.preventDefault();
