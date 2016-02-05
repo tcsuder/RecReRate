@@ -12,8 +12,8 @@
 #homePage {
   padding-top: 7em;
   padding-bottom: 9em;
-  padding-left: 15%;
-  padding-right: 15%;*/
+  padding-left: 5em;
+  padding-right: 5em;*/
   border: 5px solid black;
   margin-top: 10em;
   margin-bottom: 10em;
@@ -25,9 +25,16 @@ body {
 }
 
 #homePageButtons {
+  margin: auto;
+  width: 80%;
   padding: 10%;
   background-color: white;
   opacity: .8;
+}
+
+@media (min-width: 1200px)
+.container {
+    width: 1170px;
 }
 
 #homePageButtons h3 {
