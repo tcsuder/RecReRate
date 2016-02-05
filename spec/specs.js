@@ -11,15 +11,29 @@ describe('Park', function() {
   });
 
   it("will find all parks in one or more given locations", function() {
-    expect(parkCompiler("north")).to.eql([arborLodge, overlook, cathedral, kelleyPoint, pier, peninsula])
+    expect(parkCompiler("north")).to.eql([arborLodge, overlook, cathedral, kelleyPoint, pier, peninsula]);
   });
 
   it("will add parks that have amenities chosen by user and remove parks that don't", function() {
-    expect(preferenceFinder("pool")).to.eql([peninsula, pier])
+    expect(preferenceFinder("pool")).to.eql([peninsula, pier]);
   });
 
   it("will remove parks that don't have activities chose by the user", function() {
-    expect(activitiesFinder("tennis")).to.eql([arborLodge, peninsula])
+    expect(preferenceFinder("tennis")).to.eql([peninsula, pier, arborLodge]);
+  });
+
+  it("creates the fullSerachResult method to combine and style search results", function() {
+    var peninsula = new Park("Peninsula Park", "peninsula", "north");
+    expect(fullSearchResult(peninsula)).to.be.a("string");
+  });
+});
+
+describe('preferenceMatch', function() {
+  it("creates a Prefence Match object with the given specifications", function() {
+    var testPreferenceMatch = new preferenceMatch("peninsula");
+    expect(testPreferenceMatch.parkId).to.equal("peninsula");
+    expect(testPreferenceMatch.activityMatchIndices).to.equal(-1);
+    expect(testPreferenceMatch.amenityMatchIndices).to.equal(-1);
   });
 });
 
