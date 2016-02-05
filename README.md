@@ -1,4 +1,3 @@
-[![Stories in Ready](https://badge.waffle.io/tcsuder/PortlandParkMeeter.png?label=ready&title=Ready)](https://waffle.io/tcsuder/PortlandParkMeeter)
 # REC - RE - RATE
 
 ##### This website helps users find parks in Portland which match their specific interests, and allows users to comment and rate on individual parks.
