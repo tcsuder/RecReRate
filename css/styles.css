@@ -68,6 +68,14 @@ body img {
   background-color: #5A7033;
 }
 
+#tagline {
+  font-size: 1.5em;
+}
+
+#indent {
+  padding: 15px;
+}
+
 /* ===================================SEARCH PAGE*/
 #search button{
   margin-top: 2em;
