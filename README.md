@@ -1,6 +1,6 @@
 # REC - RE - RATE
 
-##### This website helps users find parks in Portland which match their specific interests, and allows users to comment and rate on individual parks.
+##### This website helps users find parks in Portland which match their specific interests, and allows users to comment and rate on individual parks. | February 1, 2016
 
 #### By: Tyler Suderman, Anna Becker, Jordan Meier, Charlie Carter
 
