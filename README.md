@@ -12,7 +12,7 @@ This is the week five final project for Epicodus Intro To Programming. The inten
 
 Cloning this repository to make local branch.
 
-Live Link: tcsuder.github.io/PortlandParkMeeter
+[Visit RecReRate] http://tcsuder.github.io/RecReRate
 
 ## Technologies Used
 
